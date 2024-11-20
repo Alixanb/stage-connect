@@ -1,14 +1,12 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";
 import Home from "./Home";
-import Experience from "./Experience";
+import Experience from "./experience/Experience";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/">
           <Route index element={<Home />} />
           <Route path="experience" element={<Experience />} />
         </Route>
