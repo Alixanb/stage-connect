@@ -1,9 +1,9 @@
 import { useKeyboardControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { CapsuleCollider, RigidBody } from "@react-three/rapier";
+import { CapsuleCollider, RigidBody, type RapierRigidBody } from "@react-three/rapier";
 import { useControls } from "leva";
 import { useEffect, useRef, useState } from "react";
-import { MathUtils, Vector3 } from "three";
+import { Group, MathUtils, Vector3 } from "three";
 import { degToRad } from "three/src/math/MathUtils.js";
 import { Character } from "./Character";
 
@@ -29,29 +29,32 @@ const lerpAngle = (start, end, t) => {
 };
 
 export const CharacterController = () => {
-  const { WALK_SPEED, RUN_SPEED, ROTATION_SPEED } = useControls(
+  const { WALK_SPEED, RUN_SPEED, ROTATION_SPEED, JUMP_FORCE } = useControls(
     "Character Control",
     {
       WALK_SPEED: { value: 0.8, min: 0.1, max: 4, step: 0.1 },
       RUN_SPEED: { value: 1.6, min: 0.2, max: 12, step: 0.1 },
       ROTATION_SPEED: {
-        value: degToRad(0.5),
+        value: degToRad(2),
         min: degToRad(0.1),
         max: degToRad(5),
         step: degToRad(0.1),
       },
+      JUMP_FORCE: { value: 5, min: 1, max: 10, step: 0.1 },
     }
   );
-  const rb = useRef();
-  const container = useRef();
-  const character = useRef();
+  const rb = useRef<RapierRigidBody>(null);
+  const container = useRef<Group>(null);
+  const character = useRef<Group>(null);
+  const cameraTarget = useRef<Group>(null);
+  const cameraPosition = useRef<Group>(null);
 
   const [animation, setAnimation] = useState("idle");
+  const [isGrounded, setIsGrounded] = useState(true);
+  const jumpCooldown = useRef(0);
 
   const characterRotationTarget = useRef(0);
   const rotationTarget = useRef(0);
-  const cameraTarget = useRef();
-  const cameraPosition = useRef();
   const cameraWorldPosition = useRef(new Vector3());
   const cameraLookAtWorldPosition = useRef(new Vector3());
   const cameraLookAt = useRef(new Vector3());
@@ -59,12 +62,14 @@ export const CharacterController = () => {
   const isClicking = useRef(false);
 
   useEffect(() => {
-    const onMouseDown = (e) => {
+    const onMouseDown = () => {
       isClicking.current = true;
     };
-    const onMouseUp = (e) => {
+
+    const onMouseUp = () => {
       isClicking.current = false;
     };
+
     document.addEventListener("mousedown", onMouseDown);
     document.addEventListener("mouseup", onMouseUp);
     // touch
@@ -78,14 +83,33 @@ export const CharacterController = () => {
     };
   }, []);
 
-  useFrame(({ camera, mouse }) => {
+  useFrame(({ camera, mouse }, delta) => {
+    if (!rb.current || !container.current || !character.current || !cameraPosition.current || !cameraTarget.current) return;
+
     if (rb.current) {
       const vel = rb.current.linvel();
+
+      // Update jump cooldown
+      if (jumpCooldown.current > 0) {
+        jumpCooldown.current -= delta;
+      }
+
+
+      const raycastOrigin = rb.current.translation();
+      raycastOrigin.y -= 0.25;
+      const isOnGround = Math.abs(vel.y) <= 0.01;
+      setIsGrounded(isOnGround);
 
       const movement = {
         x: 0,
         z: 0,
       };
+
+      if (get().jump && isGrounded && jumpCooldown.current <= 0) {
+        vel.y = JUMP_FORCE;
+        jumpCooldown.current = 0.5;
+        setAnimation("jump");
+      }
 
       if (get().forward) {
         movement.z = 1;
@@ -126,12 +150,14 @@ export const CharacterController = () => {
         vel.z =
           Math.cos(rotationTarget.current + characterRotationTarget.current) *
           speed;
-        if (speed === RUN_SPEED) {
+        if (!isGrounded) {
+          // Keep jump animation if in air
+        } else if (speed === RUN_SPEED) {
           setAnimation("run");
         } else {
           setAnimation("walk");
         }
-      } else {
+      } else if (isGrounded) {
         setAnimation("idle");
       }
       character.current.rotation.y = lerpAngle(
