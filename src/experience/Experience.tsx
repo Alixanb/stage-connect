@@ -1,7 +1,14 @@
 import React, { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Box, Environment, FirstPersonControls } from "@react-three/drei";
+import { Environment, FirstPersonControls, useGLTF } from "@react-three/drei";
 import { PerspectiveCamera } from "three";
+
+const Model: React.FC = () => {
+  // Charger le modèle avec useGLTF
+  const { scene } = useGLTF("/platine.gltf");
+
+  return <primitive object={scene} scale={1} />;
+};
 
 const Experience: React.FC = () => {
   const cameraRef = useRef<PerspectiveCamera>(null);
@@ -46,10 +53,8 @@ const Experience: React.FC = () => {
           <meshStandardMaterial color="#cccccc" />
         </mesh>
 
-        {/* Cube au centre */}
-        <Box position={[0, 0.5, 0]}>
-          <meshStandardMaterial attach="material" color="#4caf50" />
-        </Box>
+        {/* Modèle chargé */}
+        <Model />
 
         {/* Caméra avec FirstPersonControls */}
         <FirstPersonControls
@@ -66,3 +71,6 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
+
+// N'oubliez pas d'appeler useGLTF.preload pour précharger le modèle
+useGLTF.preload("/platine.gltf");

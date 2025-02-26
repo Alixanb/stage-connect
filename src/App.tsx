@@ -11,5 +11,5 @@ export default function App() {
         <Route path="/experience" element={<Experience />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
