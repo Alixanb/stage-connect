@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import Experience from "./experience/Experience";
+import ExperiencePage from "./experience/page";
 
 export default function App() {
   return (
@@ -8,7 +8,7 @@ export default function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
-          <Route path="experience" element={<Experience />} />
+          <Route path="experience" element={<ExperiencePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
