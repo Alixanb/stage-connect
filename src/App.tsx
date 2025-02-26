@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Experience from "./experience/Experience";
 import Home from "./hompage/Home";
+import "./index.css";
 
 export default function App() {
   return (
