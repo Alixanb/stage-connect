@@ -28,7 +28,7 @@ export const Header = () => {
         </div>
 
       </div>
-      <div className="mt-20 bg-[#86182F] p-2 flex flex-col gap-4">
+      <div className="mt-12 bg-[#86182F] p-2 flex flex-col gap-4">
         <div className="flex justify-between uppercase font-medium tracking-wide">
           <div className="flex gap-2 items-center">
             <span className="bg-[#28927C] rounded-full size-4"></span>
