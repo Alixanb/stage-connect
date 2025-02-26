@@ -1,110 +1,126 @@
-/* Style général */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
+@import "tailwindcss";
 
-/* Conteneur principal */
-.container {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-}
-
-/* Barre de navigation */
-nav {
-  background-color: #007bff;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  margin: 0 10px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-nav a:hover {
-  background-color: #0056b3;
-}
-
-/* Titres */
-h1, h2 {
-  color: #007bff;
-  text-align: center;
-}
-
-/* Bouton */
-button {
-  display: inline-block;
-  background-color: #28a745;
-  color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: #218838;
-}
-
-button:focus {
-  outline: none;
-}
-
-/* Section vide (404) */
-.not-found {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.not-found h1 {
-  font-size: 48px;
-  color: #dc3545;
-}
-
-.not-found p {
-  font-size: 18px;
-  color: #6c757d;
-}
-
-/* Reset des marges et du padding */
-* {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-
-html, body {
-  height: 100%; /* Le body et html doivent occuper toute la hauteur de l'écran */
-  overflow: hidden; /* Empêche le défilement de la page */
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
-
-#root {
-  height: 100%;
-  width: 100%;
+body {
+  line-height: 1;
 }
-
-.fullscreen-container {
-  width: 100vw; /* Prendre toute la largeur de la fenêtre */
-  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
-  display: flex;
-  justify-content: center; /* Centrer le Canvas horizontalement */
-  align-items: center; /* Centrer le Canvas verticalement */
-  overflow: hidden; /* S'assurer qu'il n'y a pas de défilement */
+ol,
+ul {
+  list-style: none;
 }
-
-canvas {
-  display: block; /* Enlever l'espace supplémentaire en dessous du canvas */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
