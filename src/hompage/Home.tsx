@@ -1,16 +1,21 @@
-import React from "react";
-import { AboutUs } from "../components/AboutUs";
-import { Header } from "../components/Header";
-import Experience from './Experience';
-import ThePerformer from "./ThePerformer";
+import React from 'react'
+import { AboutUs } from '../components/AboutUs'
+import { Header } from '../components/Header'
+import Experience from './Experience'
+import ThePerformer from './ThePerformer'
+import Footer from '../Footer'
+import { div } from 'three/webgpu'
 
 const Home: React.FC = () => {
   return (
-    <div className="p-16">
-      <Header />
-      <AboutUs />
-      <Experience />
-      <ThePerformer />
+    <div>
+      <div className="p-16">
+        <Header />
+        <AboutUs />
+        <Experience />
+        <ThePerformer />
+      </div>
+      <Footer />
     </div>
   )
 }
