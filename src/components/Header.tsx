@@ -6,6 +6,7 @@ export const Header = () => {
     <div className="flex flex-col gap-4">
       <div className="flex h-[170px] text-[#979797] tracking-tighter font-bold">
         <h1>Stage connect is a software</h1>
+        <a href="/about">About us</a>
       </div>
       <div className="flex flex-col text-[140px] uppercase font-medium [&>div]:-mt-12">
         <div className="flex gap-12 items-center">
