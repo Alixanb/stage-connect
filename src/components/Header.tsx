@@ -151,9 +151,11 @@ export const Header = () => {
             className="hover:underline py-1 px-16 border border-white flex items-center gap-2"
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2 }}
+          ></motion.a>
+          <motion.a
+            href="/about"
+            className="hover:underline py-1 px-16 border border-white flex items-center gap-2"
           >
-          </a>
-          <a href="/about" className="hover:underline py-1 px-16 border border-white flex items-center gap-2">
             En savoir plus
           </motion.a>
         </motion.div>
