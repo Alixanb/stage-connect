@@ -6,6 +6,7 @@ import { Physics } from "@react-three/rapier";
 import { useControls } from "leva";
 import { useRef } from "react";
 import { CharacterController } from "./CharacterController";
+import { InteractiveElements } from "./InteractiveElements";
 import { Map } from "./Map";
 
 const maps = {
@@ -68,6 +69,7 @@ export const Experience = () => {
           model={`models/${map}.glb`}
         />
         <CharacterController />
+        <InteractiveElements />
       </Physics>
     </>
   );
