@@ -12,8 +12,11 @@
   "dependencies": {
     "@react-three/drei": "^9.117.3",
     "@react-three/fiber": "^8.17.10",
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.0.9",
     "@types/three": "^0.170.0",
+    "framer-motion": "^12.5.0",
+    "lenis": "^1.2.3",
     "lucide-react": "^0.476.0",
     "@react-three/rapier": "^1.5.0",
     "leva": "^0.10.0",
