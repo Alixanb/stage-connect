@@ -12,9 +12,15 @@
   "dependencies": {
     "@react-three/drei": "^9.117.3",
     "@react-three/fiber": "^8.17.10",
+<<<<<<< HEAD
     "@tailwindcss/vite": "^4.0.9",
     "@types/three": "^0.170.0",
     "lucide-react": "^0.476.0",
+=======
+    "@react-three/rapier": "^1.5.0",
+    "@types/three": "^0.170.0",
+    "leva": "^0.10.0",
+>>>>>>> rfc
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0",

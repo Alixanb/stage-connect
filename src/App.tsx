@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Experience from "./experience/Experience";
+import ExperiencePage from "./experience/page";
+
 import Home from "./hompage/Home";
 import "./index.css";
 import Contact from "./contact/Contact";
@@ -12,7 +13,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/experience" element={<Experience />} />
+        <Route path="experience" element={<ExperiencePage />} />
       </Routes>
     </BrowserRouter>
   )
