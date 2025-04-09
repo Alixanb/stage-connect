@@ -2,7 +2,7 @@ export default function AboutUs() {
   return (
     <div className="bg-black text-white">
       {/* Header */}
-      <div className="bg-[#B01E3B] py-8 px-6 flex items-center gap-6 md:gap-8">
+      <div className="bg-[#B01E3B] py-8 px-6 flex items-center gap-6 md:gap-8 mt-30">
         <svg width="160" height="160" viewBox="0 0 140 141" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fillRule="evenodd"
@@ -15,7 +15,7 @@ export default function AboutUs() {
         <p className="ml-auto text-xs md:text-sm max-w-xs md:max-w-sm text-right leading-tight">
           Stage Connect® is a SaaS for staging. Albums, Q&A, showcase products, deep immersive tunnels.
         </p>
-      </div>
+    </div>
 
 <section className="bg-black text-white py-20 px-4 md:px-10">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -41,6 +41,11 @@ export default function AboutUs() {
         knöpfle libero. Sauß bissame id ac senectus flammkueche leberwurscht
         Heineken Pellentesque elit...
       </p>
+      <div className="max-w-7xl mx-auto mt-6 text-white/70 text-sm md:text-base">
+    <a href="#" className="text-sky-300 underline mt-2 inline-block">
+      Learn more about us
+    </a>
+  </div>
     </div>
 
     {/* Colonne droite */}
@@ -62,29 +67,35 @@ export default function AboutUs() {
       </div>
     </div>
   </div>
-
-  {/* Texte sous image */}
-  <div className="max-w-7xl mx-auto mt-6 text-white/70 text-sm md:text-base">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum id felis...
-    </p>
-    <a href="#" className="text-sky-300 underline mt-2 inline-block">
-      Learn more about us
-    </a>
-  </div>
 </section>
 
       {/* Partners */}
-      <div className="px-6 py-12 text-center">
-        <h2 className="text-4xl font-black tracking-tight">WE LOVED TO WORK</h2>
+      <div className="px-6 py-12 ">
+        <h2 className="text-8xl tracking-tight">WE LOVED TO WORK</h2>
+        <div className="flex justify-between">
         <p className="mt-2 text-sm text-gray-400">
           Here is the artists we worked with to develop their own online stage
         </p>
-        <div className="flex justify-center items-center gap-2 my-4">
-          <span className="text-2xl">🔁</span>
-          <span className="text-4xl font-black text-[#B01E3B]">WITH THEM</span>
-        </div>
+        <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_82_119)">
+          <mask id="mask0_82_119" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="101">
+          <path d="M100 0.5H0V100.5H100V0.5Z" fill="white"/>
+          </mask>
+          <g mask="url(#mask0_82_119)">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M50 17.3225C46.3869 17.3225 43.458 20.2514 43.458 23.8645H26.6355C26.6355 10.9607 37.0961 0.5 50 0.5C62.904 0.5 73.3645 10.9607 73.3645 23.8645C73.3645 36.7683 62.904 47.229 50 47.229V30.4065C53.613 30.4065 56.542 27.4776 56.542 23.8645C56.542 20.2514 53.613 17.3225 50 17.3225ZM83.1775 50.5C83.1775 46.8869 80.2485 43.958 76.6355 43.958V27.1355C89.5395 27.1355 100 37.5961 100 50.5C100 63.404 89.5395 73.8645 76.6355 73.8645C63.7315 73.8645 53.271 63.404 53.271 50.5H70.0935C70.0935 54.113 73.0225 57.042 76.6355 57.042C80.2485 57.042 83.1775 54.113 83.1775 50.5ZM23.3645 57.042C19.7514 57.042 16.8225 54.113 16.8225 50.5C16.8225 46.8869 19.7514 43.958 23.3645 43.958C26.9776 43.958 29.9065 46.8869 29.9065 50.5H46.729C46.729 37.5961 36.2683 27.1355 23.3645 27.1355C10.4607 27.1355 0 37.5961 0 50.5C0 63.404 10.4607 73.8645 23.3645 73.8645V57.042ZM50 83.6775C53.613 83.6775 56.542 80.7485 56.542 77.1355H73.3645C73.3645 90.0395 62.904 100.5 50 100.5C37.0961 100.5 26.6355 90.0395 26.6355 77.1355C26.6355 64.2315 37.0961 53.771 50 53.771V70.5935C46.3869 70.5935 43.458 73.5225 43.458 77.1355C43.458 80.7485 46.3869 83.6775 50 83.6775Z" fill="#28927C"/>
+          </g>
+          </g>
+          <defs>
+          <clipPath id="clip0_82_119">
+          <rect width="100" height="100" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>
+        </svg>
+        <p className="text-8xl tracking-tight">
+          WITH THEM
+        </p>
 
+        </div>
         {/* Avatars */}
         <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
           <img src="src/assets/artist.png" alt="Artist 1" className="w-full h-auto rounded-lg shadow-md" />
