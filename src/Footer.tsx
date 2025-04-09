@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <h1 className="text-white text-5xl my-20">Your Art, Our Stage</h1>
           <div className="flex justify-center">
             <a
-              href="#"
+              href="/contact"
               className="text-black bg-white text-xl py-4 px-24 rounded-full"
             >
               Nous contacter
