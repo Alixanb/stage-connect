@@ -14,15 +14,17 @@ const keyboardMap: KeyboardControlsEntry<string>[] = [
 ];
 
 
-const ExpericencePage: React.FC = () => {
+const ExperiencePage: React.FC = () => {
   return (
-    <div className="fullscreen-container">
+    <div className="w-full h-screen">
       <KeyboardControls map={keyboardMap}>
         <Canvas
           shadows
           camera={{ position: [3, 3, 3], near: 0.1, fov: 40 }}
           style={{
             touchAction: "none",
+            height: "100%",
+            width: "100%"
           }}
         >
           <Experience />
@@ -32,4 +34,4 @@ const ExpericencePage: React.FC = () => {
   );
 };
 
-export default ExpericencePage;
+export default ExperiencePage;
