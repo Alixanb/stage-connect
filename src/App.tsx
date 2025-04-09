@@ -3,6 +3,7 @@ import Experience from "./experience/Experience";
 import Home from "./hompage/Home";
 import "./index.css";
 import Contact from "./contact/Contact";
+import AboutUs from "./about/AboutUs";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/experience" element={<Experience />} />
       </Routes>
     </BrowserRouter>
