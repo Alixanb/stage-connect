@@ -1,3 +1,17 @@
+import React from "react";
+import BurgerMenu from "./BurgerMenu";
+
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <div>
+      <BurgerMenu />
+      <main>{children}</main>
+    </div>
+  );
+};
+
+export default Layout;
+
 import React, { ReactNode, useEffect, useRef } from 'react'
 import { Header } from './Header'
 import Footer from '../Footer'
