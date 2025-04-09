@@ -5,10 +5,11 @@ import Experience from './Experience'
 import ThePerformer from './ThePerformer'
 import Footer from '../Footer'
 import { div } from 'three/webgpu'
+import Layout from "../components/Layout";
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <Layout>
       <div className="p-16">
         <Header />
         <AboutUs />
@@ -16,8 +17,8 @@ const Home: React.FC = () => {
         <ThePerformer />
       </div>
       <Footer />
-    </div>
-  )
-}
+    </Layout>
+  );
+};
 
-export default Home
+export default Home;
