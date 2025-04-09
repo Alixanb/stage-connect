@@ -1,5 +1,8 @@
+import Footer from "../Footer";
+
 export default function AboutUs() {
   return (
+    <>
     <div className="bg-black text-white">
       {/* Header */}
       <div className="bg-[#B01E3B] py-8 px-6 flex items-center gap-6 md:gap-8 mt-30">
@@ -105,6 +108,9 @@ export default function AboutUs() {
         </div>
       </div>
     </div>
+        <Footer />
+        </>
+
   );
   
 }
