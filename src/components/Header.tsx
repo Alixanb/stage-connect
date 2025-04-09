@@ -43,7 +43,7 @@ export const Header = () => {
             C’est parti
             <ArrowRight className="size-4" />
           </a>
-          <a href="#experience" className="hover:underline py-1 px-16 border border-white flex items-center gap-2">
+          <a href="/about" className="hover:underline py-1 px-16 border border-white flex items-center gap-2">
             En savoir plus
           </a>
         </div>
