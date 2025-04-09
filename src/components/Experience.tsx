@@ -1,5 +1,11 @@
 import star from '../assets/star.svg'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import {
+  textAnimations,
+  splitText,
+  splitTextByLines,
+} from '../animations/textAnimations'
 import cityImage from '../assets/city.png'
 import windowImage from '../assets/window.png'
 import motelImage from '../assets/motel.png'
@@ -32,13 +38,28 @@ const Experience = () => {
   return (
     <div className="bg-black text-white py-20">
       <div className="mb-20">
-        <p className="font-bold text-[100px] uppercase">Your very own</p>
-        <p className="font-bold text-[100px] uppercase text-right flex items-center gap-4 justify-end">
+        <motion.p
+          className="font-bold text-8xl uppercase"
+          variants={textAnimations.reveal.container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Your very own
+        </motion.p>
+
+        <motion.p
+          className="font-bold text-8xl uppercase text-right flex items-center gap-4 justify-end"
+          variants={textAnimations.paragraph.container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <div>
             <img src={star} alt="logo" className="w-[100px] h-[100px]" />
           </div>
           3d experience
-        </p>
+        </motion.p>
       </div>
 
       <div className="container mx-auto px-4">
@@ -99,13 +120,28 @@ const Experience = () => {
             </div>
 
             <div className="flex items-start justify-between mt-20">
-              <h2 className="text-[30px] font-bold max-w-[320px]">
+              <motion.h2
+                className="text-3xl font-bold max-w-[320px]"
+                variants={textAnimations.slideIn.container}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 Title of this section,
                 <br />
                 mus be a little bit long
-              </h2>
-              <div className="">
-                <p className="text-lg opacity-80 max-w-[800px]">
+              </motion.h2>
+              <motion.div
+                variants={textAnimations.textMask.container}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="text-lg opacity-80 max-w-[800px]"
+              >
+                <motion.p
+                  variants={textAnimations.textMask.item}
+                  style={{ overflow: 'hidden' }}
+                >
                   Lorem Elsass ipsum knack schneck libero. Carola Racing. non
                   tellus Mauris knepfle libero, Salut bisamme id ac senectus
                   flammekueche leverwurscht Heineken Pellentesque elit tchao
@@ -113,8 +149,8 @@ const Experience = () => {
                   risus, salu wie turpis, id, gal hopla dui gewurztraminer et
                   rucksack Gal. mollis nüdle ch'ai suspendisse hopla condimentum
                   eget bredele placerat Yo dû. rhoncus pellentesque
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
             </div>
           </div>
         </div>
