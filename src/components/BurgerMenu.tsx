@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import BurgerMenuIcon from "../assets/burger-menu.svg";
 import CrossIcon from "../assets/cross.svg";
 import background from '../assets/bg_footer.png'
@@ -43,34 +44,34 @@ const BurgerMenu: React.FC = () => {
         </button>
         <nav className="relative z-10 flex flex-col items-start p-4 space-y-4 text-xl text-white">
 
-          <a
-            href="/"
+          <Link
+            to="/"
             onClick={toggleMenu}
             className="hover:underline hover:text-white"
           >
             Accueil
-          </a>
-          <a
-            href="/experience"
+          </Link>
+          <Link
+            to="/experience"
             onClick={toggleMenu}
             className="hover:underline hover:text-white"
           >
             Expérience
-          </a>
-          <a
-            href="/about"
+          </Link>
+          <Link
+            to="/about"
             onClick={toggleMenu}
             className="hover:underline hover:text-white"
           >
             À propos
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             onClick={toggleMenu}
             className="hover:underline hover:text-white"
           >
             Contact
-          </a>
+          </Link>
         </nav>
       </div>
     </div>
