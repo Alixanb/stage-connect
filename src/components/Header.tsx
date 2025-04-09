@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { textAnimations } from '../animations/textAnimations'
@@ -15,7 +16,7 @@ export const Header = () => {
           Stage connect is a software
         </motion.h1>
         <h1>Stage connect is a software</h1>
-        <a href="/about">About us</a>
+        {/* <a href="/about">About us</a> */}
       </div>
       <div className="flex flex-col text-[140px] uppercase font-medium [&>div]:-mt-12">
         <motion.div
