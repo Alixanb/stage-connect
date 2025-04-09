@@ -1,0 +1,14 @@
+{
+  "elements": [
+    {
+      "id": "sofa-1",
+      "position": [10, 0, 5],
+      "rotation": [0, 0, 0],
+      "scale": 1,
+      "title": "Sofa",
+      "content": "A comfortable looking sofa",
+      "type": "interactive",
+      "model": "models/sofa.glb"
+    }
+  ]
+}

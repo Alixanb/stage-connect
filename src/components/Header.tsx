@@ -14,6 +14,8 @@ export const Header = () => {
         >
           Stage connect is a software
         </motion.h1>
+        <h1>Stage connect is a software</h1>
+        <a href="/about">About us</a>
       </div>
       <div className="flex flex-col text-[140px] uppercase font-medium [&>div]:-mt-12">
         <motion.div
@@ -150,6 +152,8 @@ export const Header = () => {
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2 }}
           >
+          </a>
+          <a href="/about" className="hover:underline py-1 px-16 border border-white flex items-center gap-2">
             En savoir plus
           </motion.a>
         </motion.div>
