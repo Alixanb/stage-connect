@@ -7,7 +7,7 @@ import linkedin from './assets/linkedin.svg'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black max-h-[800px] relative">
+    <footer className="bg-black max-h-[800px] relative overflow-hidden">
       <img
         src={background}
         alt="background"
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <h1 className="text-white text-5xl my-20">Your Art, Our Stage</h1>
           <div className="flex justify-center">
             <a
-              href="#"
+              href="/contact"
               className="text-black bg-white text-xl py-4 px-24 rounded-full"
             >
               Nous contacter
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             <p>Actualité</p>
           </div>
         </div>
-        <div className="flex justify-between w-full px-20 py-8 border-t border-white/20">
+        <div className="mt-auto flex justify-between w-full px-20 py-8 border-t border-white/20">
           <div className="flex items-center gap-4">
             <img src={facebook} alt="facebook" height={20} />
             <img src={insta} alt="insta" width={20} height={20} />
