@@ -5,11 +5,25 @@ import {
 import { Physics } from "@react-three/rapier";
 import { useControls } from "leva";
 import { useRef } from "react";
+import { OrthographicCamera as OrthographicCameraType } from "three";
 import { CharacterController } from "./CharacterController";
 import { InteractiveElements } from "./InteractiveElements";
 import { Map } from "./Map";
 
-const maps = {
+type MapName = 'castle_on_hills' | 'animal_crossing_map' | 'city_scene_tokyo' | 'de_dust_2_with_real_light' | 'medieval_fantasy_book' | 'salle_numatrouffe';
+
+type MapConfig = {
+  [key in MapName]: {
+    scale: number;
+    position: number[];
+  }
+};
+
+const maps: MapConfig = {
+  salle_numatrouffe: {
+    scale: 0.3,
+    position: [0, -2, 0],
+  },
   castle_on_hills: {
     scale: 3,
     position: [-6, -7, 0],
@@ -30,14 +44,15 @@ const maps = {
     scale: 0.4,
     position: [-4, 0, -6],
   },
+
 };
 
 export const Experience = () => {
-  const shadowCameraRef = useRef();
+  const shadowCameraRef = useRef<OrthographicCameraType>(null);
   const { map } = useControls("Map", {
     map: {
-      value: "castle_on_hills",
-      options: Object.keys(maps),
+      value: "salle_numatrouffe" as MapName,
+      options: Object.keys(maps) as MapName[],
     },
   });
 
