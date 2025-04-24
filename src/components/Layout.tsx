@@ -33,9 +33,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div>
-      <div className="p-16">
+      <div className="p-4">
         <BurgerMenu />
-        <Header />
         {children}
       </div>
       <Footer />

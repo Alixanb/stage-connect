@@ -10,7 +10,8 @@ import Layout from '../components/Layout'
 const Home: React.FC = () => {
   return (
     <Layout>
-      <div className="p-16">
+      <Header />
+      <div className="">
         <AboutUs />
         <Experience />
         <ThePerformer />
