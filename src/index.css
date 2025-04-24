@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+/* Applique Nickel Gothic Variable pour les titres */
+/* h1, h2, h3, h4, h5, h6 {
+    font-family: 'nickel-gothic-variable', sans-serif;
+    font-variation-settings: 'wdth' 100, 'slnt' 0;
+  } */
+  
+  /* Applique Apotek pour le reste des textes */
+  /* body, p, span, a, li, div {
+    font-family: 'Apotek', sans-serif;
+  } */
