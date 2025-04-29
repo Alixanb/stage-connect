@@ -1,20 +1,20 @@
 import background from './assets/bg_footer.png'
-import logo from './assets/logo_footer.svg'
 import facebook from './assets/facebook.svg'
 import insta from './assets/insta.svg'
-import x from './assets/x.svg'
 import linkedin from './assets/linkedin.svg'
+import logo from './assets/logo_footer.svg'
+import x from './assets/x.svg'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black max-h-[800px] relative overflow-hidden">
+    <footer className="bg-black max-h-[800px] relative overflow-hidden hidden lg:block">
       <img
         src={background}
         alt="background"
         className="w-full h-full object-cover bg-center"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-between">
-        <div>
+        <div className="max-w-screen mx-auto">
           <div className="mt-24 flex justify-center">
             <img src={logo} alt="logo" width={150} height={50} />
           </div>

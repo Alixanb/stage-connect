@@ -1,6 +1,6 @@
+import { motion } from 'framer-motion';
 import { ArrowRight } from "lucide-react";
-import { motion } from 'framer-motion'
-import { textAnimations } from '../animations/textAnimations'
+import { textAnimations } from '../animations/textAnimations';
 
 export const Header = () => {
   return (
@@ -12,10 +12,10 @@ export const Header = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Stage connect is a software
+          Connect Stage est une plateforme
         </motion.h1>
       </div>
-      <div className="flex flex-col text-[140px] uppercase font-medium [&>div]:-mt-12">
+      <div className="flex flex-col text-6xl lg:text-[140px] uppercase font-medium [&>div]:lg:-mt-12">
         <motion.div
           className="flex gap-12 items-center"
           initial={{ opacity: 0, y: 20 }}
@@ -32,6 +32,7 @@ export const Header = () => {
             initial={{ rotate: -90, opacity: 0 }}
             whileInView={{ rotate: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
+            className="hidden lg:block"
             viewport={{ once: true }}
           >
             <mask
@@ -57,7 +58,7 @@ export const Header = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            Your art
+            Votre concert
           </motion.span>
         </motion.div>
         <motion.div
@@ -68,22 +69,21 @@ export const Header = () => {
           viewport={{ once: true }}
         >
           <motion.p
-            className="text-base text-end max-w-[500px] shrink normal-case font-normal"
+            className="text-base lg:text-end max-w-[500px] shrink normal-case font-normal hidden lg:block"
             variants={textAnimations.paragraph.item}
           >
-            Stage Connect® Elsass ipsum Racing. aliquam Gal. schneck Pfourtz !
-            geïz knepfle turpis so semper sed morbi hop Oberschaeffolsheim tchao
-            bissame DNA.
+            Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, interagir et vivre le concert comme si vous y étiez réellement.
           </motion.p>
           <motion.span
-            className="shrink-0 whitespace-nowrap"
+            className="lg:shrink-0 lg:whitespace-nowrap"
             variants={textAnimations.paragraph.item}
           >
-            OUR STAGE,
+            NOTRE SCÈNE,
           </motion.span>
+
         </motion.div>
         <motion.div
-          className="text-center"
+          className="lg:text-center"
           variants={textAnimations.clipReveal.container}
           initial="hidden"
           whileInView="visible"
@@ -91,6 +91,12 @@ export const Header = () => {
         >
           3D experience™
         </motion.div>
+        <motion.p
+          className="text-base lg:text-end max-w-[500px] shrink normal-case font-normal block lg:hidden"
+          variants={textAnimations.paragraph.item}
+        >
+          Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, interagir et vivre le concert comme si vous y étiez réellement.
+        </motion.p>
       </div>
       <motion.div
         className="mt-12 bg-[#86182F] p-2 flex flex-col gap-4"
@@ -108,7 +114,7 @@ export const Header = () => {
             viewport={{ once: true }}
           >
             <span className="bg-[#28927C] rounded-full size-4"></span>
-            CURRENTLY ONLINE
+            ACTUELLEMENT EN LIGNE
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -116,20 +122,20 @@ export const Header = () => {
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
           >
-            [SCROLL]
+            [DÉFILER]
           </motion.div>
         </div>
         <motion.img
           src="/header-image.jpg"
           alt="Stage Connect Header"
-          className="w-full object-cover"
+          className="w-full aspect-square lg:aspect-auto lg:h-[350px] object-cover"
           initial={{ opacity: 0, scale: 1.05 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         />
         <motion.div
-          className="flex items-center justify-center gap-4"
+          className="flex items-center justify-center gap-4 flex-col lg:flex-row"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
@@ -158,9 +164,8 @@ export const Header = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <span className="w-1/3 text-center">
-            Stage Connect® Elsass ipsum Racing. aliquam Gal. schneck Pfourtz !
-            geïz knepfle turpis.
+          <span className="mx-8 lg:mx-0 lg:w-1/3 text-center">
+            Connect Stage vous offre une expérience immersive unique pour vivre les concerts à domicile.
           </span>
         </motion.div>
       </motion.div>

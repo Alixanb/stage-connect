@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ExperiencePage from "./experience/page";
 
+import AboutUs from "./about/AboutUs";
+import Contact from "./contact/Contact";
 import Home from "./hompage/Home";
 import "./index.css";
-import Contact from "./contact/Contact";
-import AboutUs from "./about/AboutUs";
 
 export default function App() {
   return (
