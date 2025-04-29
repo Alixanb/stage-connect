@@ -15,7 +15,7 @@ export const Header = () => {
           Connect Stage est une plateforme
         </motion.h1>
       </div>
-      <div className="flex flex-col text-6xl lg:text-[140px] uppercase font-medium [&>div]:lg:-mt-12">
+      <div className="flex flex-col text-6xl lg:text-[140px] uppercase font-medium">
         <motion.div
           className="flex gap-12 items-center"
           initial={{ opacity: 0, y: 20 }}
