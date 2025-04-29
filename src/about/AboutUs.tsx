@@ -16,7 +16,7 @@ export default function AboutUs() {
           </svg>
           <h1 className="text-5xl md:text-6xl font-black tracking-wide">ABOUT US</h1>
           <p className="ml-auto text-xs md:text-sm max-w-xs md:max-w-sm text-right leading-tight">
-            Stage Connect® is a SaaS for staging. Albums, Q&A, showcase products, deep immersive tunnels.
+            Connect Stage est une plateforme immersive pour vivre des concerts virtuels en 3D.
           </p>
         </div>
 
@@ -24,28 +24,22 @@ export default function AboutUs() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             {/* Colonne gauche */}
             <div className="h-full">
-              <p className="text-sm font-medium text-white/60 mb-4">Why choose us</p>
+              <p className="text-sm font-medium text-white/60 mb-4">Pourquoi nous choisir</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                Space connect® météor sit leo <br /> Hans geiß Spätzle™
+                Immersion totale <br /> dans l'expérience concert
               </h2>
               <p className="text-white/70 text-base mb-6 max-w-xl">
-                Lorem Bisses ipsum knack schnecke libero. Carola Racing non tellus Maults
-                knöpfle libero. Sauß bissame id ac senectus flammkueche leberwurscht
-                Heineken Pellentesque elit...
+                Connect Stage vous offre la possibilité d'assister à un concert sans quitter votre domicile, tout en ayant l'impression d'y être réellement. Notre plateforme vous permet d'explorer librement une salle de concert virtuelle, où vous pouvez vous promener, interagir et vivre le concert comme si vous étiez au cœur de l'événement.
               </p>
               <p className="text-white/70 text-base mb-6 max-w-xl">
-                Lorem Bisses ipsum knack schnecke libero. Carola Racing non tellus Maults
-                knöpfle libero. Sauß bissame id ac senectus flammkueche leberwurscht
-                Heineken Pellentesque elit...
+                Que vous soyez dans l'impossibilité de vous rendre à un concert à cause de problèmes de mobilité, de santé ou de phobie de la foule, ou que vous soyez simplement éloigné géographiquement, Connect Stage vous permet de vivre pleinement l'expérience concert depuis n'importe où.
               </p>
               <p className="text-white/70 text-base mb-6 max-w-xl">
-                Lorem Bisses ipsum knack schnecke libero. Carola Racing non tellus Maults
-                knöpfle libero. Sauß bissame id ac senectus flammkueche leberwurscht
-                Heineken Pellentesque elit...
+                Les artistes peuvent ainsi se produire en ligne dans un environnement virtuel réaliste, atteignant un public mondial, tout en augmentant la visibilité de leur merchandising grâce à des liens directs vers leurs boutiques en ligne.
               </p>
               <div className="max-w-7xl mx-auto mt-6 text-white/70 text-sm md:text-base">
-                <a href="#" className="text-sky-300 underline mt-2 inline-block">
-                  Learn more about us
+                <a href="/experience" className="text-sky-300 underline mt-2 inline-block">
+                  Découvrir l'expérience
                 </a>
               </div>
             </div>
@@ -62,9 +56,9 @@ export default function AboutUs() {
 
               {/* Badge + texte par-dessus l'image */}
               <div className="absolute bottom-0 left-0 w-full bg-[#b11f30] text-white px-4 py-3 rounded-b-xl">
-                <p className="text-sm font-semibold">Early stage</p>
+                <p className="text-sm font-semibold">Expérience 3D</p>
                 <p className="text-sm">
-                  Sauß bissame id ac senectus flammkueche leberwurscht Heineken Pellentesque elit
+                  Avec Connect Stage, l'immersion dans un concert devient accessible à tous, où que vous soyez et quand vous le souhaitez.
                 </p>
               </div>
             </div>
@@ -73,31 +67,31 @@ export default function AboutUs() {
 
         {/* Partners */}
         <div className="px-6 py-12">
-          <h2 className="text-8xl tracking-tight">WE LOVED TO WORK</h2>
+          <h2 className="text-8xl tracking-tight">ARTISTES PARTENAIRES</h2>
           <div className="flex justify-between">
             <p className="mt-2 text-sm text-gray-400">
-              Here is the artists we worked with to develop their own online stage
+              Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
             </p>
             <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_82_119)">
                 <mask id="mask0_82_119" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="101">
-                  <path d="M100 0.5H0V100.5H100V0.5Z" fill="white"/>
+                  <path d="M100 0.5H0V100.5H100V0.5Z" fill="white" />
                 </mask>
                 <g mask="url(#mask0_82_119)">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M50 17.3225C46.3869 17.3225 43.458 20.2514 43.458 23.8645H26.6355C26.6355 10.9607 37.0961 0.5 50 0.5C62.904 0.5 73.3645 10.9607 73.3645 23.8645C73.3645 36.7683 62.904 47.229 50 47.229V30.4065C53.613 30.4065 56.542 27.4776 56.542 23.8645C56.542 20.2514 53.613 17.3225 50 17.3225ZM83.1775 50.5C83.1775 46.8869 80.2485 43.958 76.6355 43.958V27.1355C89.5395 27.1355 100 37.5961 100 50.5C100 63.404 89.5395 73.8645 76.6355 73.8645C63.7315 73.8645 53.271 63.404 53.271 50.5H70.0935C70.0935 54.113 73.0225 57.042 76.6355 57.042C80.2485 57.042 83.1775 54.113 83.1775 50.5ZM23.3645 57.042C19.7514 57.042 16.8225 54.113 16.8225 50.5C16.8225 46.8869 19.7514 43.958 23.3645 43.958C26.9776 43.958 29.9065 46.8869 29.9065 50.5H46.729C46.729 37.5961 36.2683 27.1355 23.3645 27.1355C10.4607 27.1355 0 37.5961 0 50.5C0 63.404 10.4607 73.8645 23.3645 73.8645V57.042ZM50 83.6775C53.613 83.6775 56.542 80.7485 56.542 77.1355H73.3645C73.3645 90.0395 62.904 100.5 50 100.5C37.0961 100.5 26.6355 90.0395 26.6355 77.1355C26.6355 64.2315 37.0961 53.771 50 53.771V70.5935C46.3869 70.5935 43.458 73.5225 43.458 77.1355C43.458 80.7485 46.3869 83.6775 50 83.6775Z" fill="#28927C"/>
+                  <path fillRule="evenodd" clipRule="evenodd" d="M50 17.3225C46.3869 17.3225 43.458 20.2514 43.458 23.8645H26.6355C26.6355 10.9607 37.0961 0.5 50 0.5C62.904 0.5 73.3645 10.9607 73.3645 23.8645C73.3645 36.7683 62.904 47.229 50 47.229V30.4065C53.613 30.4065 56.542 27.4776 56.542 23.8645C56.542 20.2514 53.613 17.3225 50 17.3225ZM83.1775 50.5C83.1775 46.8869 80.2485 43.958 76.6355 43.958V27.1355C89.5395 27.1355 100 37.5961 100 50.5C100 63.404 89.5395 73.8645 76.6355 73.8645C63.7315 73.8645 53.271 63.404 53.271 50.5H70.0935C70.0935 54.113 73.0225 57.042 76.6355 57.042C80.2485 57.042 83.1775 54.113 83.1775 50.5ZM23.3645 57.042C19.7514 57.042 16.8225 54.113 16.8225 50.5C16.8225 46.8869 19.7514 43.958 23.3645 43.958C26.9776 43.958 29.9065 46.8869 29.9065 50.5H46.729C46.729 37.5961 36.2683 27.1355 23.3645 27.1355C10.4607 27.1355 0 37.5961 0 50.5C0 63.404 10.4607 73.8645 23.3645 73.8645V57.042ZM50 83.6775C53.613 83.6775 56.542 80.7485 56.542 77.1355H73.3645C73.3645 90.0395 62.904 100.5 50 100.5C37.0961 100.5 26.6355 90.0395 26.6355 77.1355C26.6355 64.2315 37.0961 53.771 50 53.771V70.5935C46.3869 70.5935 43.458 73.5225 43.458 77.1355C43.458 80.7485 46.3869 83.6775 50 83.6775Z" fill="#28927C" />
                 </g>
               </g>
               <defs>
                 <clipPath id="clip0_82_119">
-                  <rect width="100" height="100" fill="white" transform="translate(0 0.5)"/>
+                  <rect width="100" height="100" fill="white" transform="translate(0 0.5)" />
                 </clipPath>
               </defs>
             </svg>
             <p className="text-8xl tracking-tight">
-              WITH THEM
+              COLLABORATIONS
             </p>
           </div>
-          
+
           {/* Avatars */}
           <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
             <img src="src/assets/artist.png" alt="Artist 1" className="w-full h-auto rounded-lg shadow-md" />

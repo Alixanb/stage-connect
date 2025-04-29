@@ -1,15 +1,13 @@
-import star from '../assets/star.svg'
-import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import {
-  textAnimations,
-  splitText,
-  splitTextByLines,
+  textAnimations
 } from '../animations/textAnimations'
 import cityImage from '../assets/city.png'
-import windowImage from '../assets/window.png'
-import motelImage from '../assets/motel.png'
 import humanImage from '../assets/human.png'
+import motelImage from '../assets/motel.png'
+import star from '../assets/star.svg'
+import windowImage from '../assets/window.png'
 
 const Experience = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -39,26 +37,26 @@ const Experience = () => {
     <div className="bg-black text-white py-20">
       <div className="mb-20">
         <motion.p
-          className="font-bold text-8xl uppercase"
+          className="font-bold text-4xl lg:text-6xl uppercase"
           variants={textAnimations.reveal.container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Your very own
+          Immersion totale
         </motion.p>
 
         <motion.p
-          className="font-bold text-8xl uppercase text-right flex items-center gap-4 justify-end"
+          className="font-bold text-4xl lg:text-6xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit"
           variants={textAnimations.paragraph.container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div>
+          <div className="hidden lg:block">
             <img src={star} alt="logo" className="w-[100px] h-[100px]" />
           </div>
-          3d experience
+          expérience 3D
         </motion.p>
       </div>
 
@@ -70,9 +68,8 @@ const Experience = () => {
                 {slides[currentSlide].map((slide, index) => (
                   <div
                     key={index}
-                    className={`max-h-[540px] overflow-hidden ${
-                      index === 0 ? 'col-span-4' : 'col-span-2'
-                    }`}
+                    className={`max-h-[540px] overflow-hidden ${index === 0 ? 'col-span-4' : 'col-span-2'
+                      }`}
                   >
                     <img
                       src={slide.image}
@@ -119,7 +116,7 @@ const Experience = () => {
               </button>
             </div>
 
-            <div className="flex items-start justify-between mt-20">
+            <div className="flex flex-col lg:flex-row items-start justify-between mt-8 lg:mt-20">
               <motion.h2
                 className="text-3xl font-bold max-w-[320px]"
                 variants={textAnimations.slideIn.container}
@@ -127,9 +124,9 @@ const Experience = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                Title of this section,
+                Explorez et interagissez
                 <br />
-                mus be a little bit long
+                comme si vous y étiez
               </motion.h2>
               <motion.div
                 variants={textAnimations.textMask.container}
@@ -142,13 +139,7 @@ const Experience = () => {
                   variants={textAnimations.textMask.item}
                   style={{ overflow: 'hidden' }}
                 >
-                  Lorem Elsass ipsum knack schneck libero. Carola Racing. non
-                  tellus Mauris knepfle libero, Salut bisamme id ac senectus
-                  flammekueche leverwurscht Heineken Pellentesque elit tchao
-                  bissame sed Chulien eleifend so auctor, in, nullam Pfourtz !
-                  risus, salu wie turpis, id, gal hopla dui gewurztraminer et
-                  rucksack Gal. mollis nüdle ch'ai suspendisse hopla condimentum
-                  eget bredele placerat Yo dû. rhoncus pellentesque
+                  Connect Stage n'est pas seulement un site de diffusion en ligne, c'est un espace virtuel où chaque utilisateur peut s'immerger totalement dans l'ambiance d'un concert. Notre technologie 3D vous permet d'explorer librement une salle de concert virtuelle, de vous déplacer à votre guise, d'interagir avec d'autres participants et de vivre le concert comme si vous étiez au cœur de l'événement. Les artistes peuvent ainsi toucher un public mondial tout en offrant une expérience authentique et immersive.
                 </motion.p>
               </motion.div>
             </div>
