@@ -1,12 +1,19 @@
+import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 
 export default function AboutUs() {
   return (
     <Layout>
+      <Helmet>
+        <title>À propos de Connect Stage - Concerts virtuels en 3D immersifs</title>
+        <meta name="description" content="Découvrez Connect Stage, une plateforme qui vous offre la possibilité d'assister à des concerts virtuels immersifs en 3D sans quitter votre domicile." />
+        <meta name="keywords" content="Connect Stage, concert virtuel, expérience immersive, 3D, artistes, technologie" />
+        <link rel="canonical" href="https://connect-stage.com/about" />
+      </Helmet>
       <div className="bg-black text-white">
         {/* Header */}
-        <div className="bg-[#B01E3B] py-8 px-6 flex items-center gap-6 md:gap-8">
-          <svg width="160" height="160" viewBox="0 0 140 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <section className="bg-[#B01E3B] py-8 px-6 flex items-center gap-6 md:gap-8">
+          <svg width="160" height="160" viewBox="0 0 140 141" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -14,11 +21,11 @@ export default function AboutUs() {
               fill="#28927C"
             />
           </svg>
-          <h1 className="text-5xl md:text-6xl font-black tracking-wide">ABOUT US</h1>
+          <h1 className="text-5xl md:text-6xl font-black tracking-wide">À PROPOS</h1>
           <p className="ml-auto text-xs md:text-sm max-w-xs md:max-w-sm text-right leading-tight">
             Connect Stage est une plateforme immersive pour vivre des concerts virtuels en 3D.
           </p>
-        </div>
+        </section>
 
         <section className="bg-black text-white py-20 px-4 md:px-10">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -38,7 +45,7 @@ export default function AboutUs() {
                 Les artistes peuvent ainsi se produire en ligne dans un environnement virtuel réaliste, atteignant un public mondial, tout en augmentant la visibilité de leur merchandising grâce à des liens directs vers leurs boutiques en ligne.
               </p>
               <div className="max-w-7xl mx-auto mt-6 text-white/70 text-sm md:text-base">
-                <a href="/experience" className="text-sky-300 underline mt-2 inline-block">
+                <a href="/experience" className="text-sky-300 underline mt-2 inline-block" aria-label="Découvrir l'expérience Connect Stage">
                   Découvrir l'expérience
                 </a>
               </div>
@@ -49,8 +56,11 @@ export default function AboutUs() {
               <div className="overflow-hidden rounded-xl shadow-lg">
                 <img
                   src="src/assets/stage.png"
-                  alt="Virtual stage"
+                  alt="Scène virtuelle de concert Connect Stage"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
+                  width="800"
+                  height="600"
                 />
               </div>
 
@@ -66,13 +76,13 @@ export default function AboutUs() {
         </section>
 
         {/* Partners */}
-        <div className="px-6 py-12">
-          <h2 className="text-8xl tracking-tight">ARTISTES PARTENAIRES</h2>
+        <section className="px-6 py-12" aria-labelledby="partners-section">
+          <h2 id="partners-section" className="text-8xl tracking-tight">ARTISTES PARTENAIRES</h2>
           <div className="flex justify-between">
             <p className="mt-2 text-sm text-gray-400">
               Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
             </p>
-            <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g clipPath="url(#clip0_82_119)">
                 <mask id="mask0_82_119" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="101">
                   <path d="M100 0.5H0V100.5H100V0.5Z" fill="white" />
@@ -94,12 +104,12 @@ export default function AboutUs() {
 
           {/* Avatars */}
           <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="src/assets/artist.png" alt="Artist 1" className="w-full h-auto rounded-lg shadow-md" />
-            <img src="src/assets/artist.png" alt="Artist 2" className="w-full h-auto rounded-lg shadow-md" />
-            <img src="src/assets/artist.png" alt="Artist 3" className="w-full h-auto rounded-lg shadow-md" />
-            <img src="src/assets/artist.png" alt="Artist 4" className="w-full h-auto rounded-lg shadow-md" />
+            <img src="src/assets/artist.png" alt="Artiste partenaire 1" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="src/assets/artist.png" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="src/assets/artist.png" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="src/assets/artist.png" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
           </div>
-        </div>
+        </section>
       </div>
     </Layout>
   );

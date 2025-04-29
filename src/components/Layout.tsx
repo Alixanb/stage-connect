@@ -1,7 +1,6 @@
-import React, { ReactNode, useEffect, useRef } from 'react'
-import { Header } from './Header'
-import Footer from '../Footer'
-import Lenis from '@studio-freight/lenis'
+import Lenis from '@studio-freight/lenis';
+import React, { ReactNode, useEffect, useRef } from 'react';
+import Footer from '../Footer';
 import BurgerMenu from "./BurgerMenu";
 
 type LayoutProps = {
@@ -32,11 +31,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [])
 
   return (
-    <div>
-      <div className="p-4">
-        <BurgerMenu />
+    <div className="site-wrapper">
+      <header>
+        <div className="p-4">
+          <BurgerMenu />
+        </div>
+      </header>
+      <main id="main-content" className="p-4">
         {children}
-      </div>
+      </main>
       <Footer />
     </div>
   )

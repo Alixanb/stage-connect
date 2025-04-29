@@ -14,14 +14,14 @@ const Experience = () => {
 
   const slides = [
     [
-      { image: cityImage, alt: 'Foggy city skyline' },
-      { image: windowImage, alt: 'Window silhouettes' },
-      { image: motelImage, alt: 'Vintage motel sign' },
+      { image: cityImage, alt: 'Vue panoramique d\'une salle de concert virtuelle Connect Stage', width: 600, height: 400 },
+      { image: windowImage, alt: 'Interface immersive de Connect Stage', width: 300, height: 200 },
+      { image: motelImage, alt: 'Environnement 3D de Connect Stage', width: 300, height: 200 },
     ],
     [
-      { image: windowImage, alt: 'Window silhouettes' },
-      { image: cityImage, alt: 'Foggy city skyline' },
-      { image: humanImage, alt: 'Human portrait' },
+      { image: windowImage, alt: 'Interface immersive de Connect Stage', width: 300, height: 200 },
+      { image: cityImage, alt: 'Vue panoramique d\'une salle de concert virtuelle Connect Stage', width: 600, height: 400 },
+      { image: humanImage, alt: 'Avatar participant à un concert virtuel', width: 300, height: 200 },
     ],
   ]
 
@@ -34,9 +34,10 @@ const Experience = () => {
   }
 
   return (
-    <div className="bg-black text-white py-20">
+    <section className="bg-black text-white py-20" aria-labelledby="experience-section">
       <div className="mb-20">
-        <motion.p
+        <motion.h2
+          id="experience-section"
           className="font-bold text-4xl lg:text-6xl uppercase"
           variants={textAnimations.reveal.container}
           initial="hidden"
@@ -44,7 +45,7 @@ const Experience = () => {
           viewport={{ once: true }}
         >
           Immersion totale
-        </motion.p>
+        </motion.h2>
 
         <motion.p
           className="font-bold text-4xl lg:text-6xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit"
@@ -54,7 +55,7 @@ const Experience = () => {
           viewport={{ once: true }}
         >
           <div className="hidden lg:block">
-            <img src={star} alt="logo" className="w-[100px] h-[100px]" />
+            <img src={star} alt="Icône Connect Stage" className="w-[100px] h-[100px]" width="100" height="100" />
           </div>
           expérience 3D
         </motion.p>
@@ -68,27 +69,30 @@ const Experience = () => {
                 {slides[currentSlide].map((slide, index) => (
                   <div
                     key={index}
-                    className={`max-h-[540px] overflow-hidden ${index === 0 ? 'col-span-4' : 'col-span-2'
-                      }`}
+                    className={`max-h-[540px] overflow-hidden ${index === 0 ? 'col-span-4' : 'col-span-2'}`}
                   >
                     <img
                       src={slide.image}
                       alt={slide.alt}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      width={slide.width}
+                      height={slide.height}
                     />
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="flex justify-end gap-4 mb-16">
-              <button onClick={prevSlide} className="group">
+            <div className="flex justify-end gap-4 mb-16" aria-label="Navigation du diaporama">
+              <button onClick={prevSlide} className="group" aria-label="Image précédente">
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <path
                     d="M15 19L8 12L15 5"
@@ -98,13 +102,14 @@ const Experience = () => {
                   />
                 </svg>
               </button>
-              <button onClick={nextSlide} className="group">
+              <button onClick={nextSlide} className="group" aria-label="Image suivante">
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <path
                     d="M9 5L16 12L9 19"
@@ -117,7 +122,7 @@ const Experience = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row items-start justify-between mt-8 lg:mt-20">
-              <motion.h2
+              <motion.h3
                 className="text-3xl font-bold max-w-[320px]"
                 variants={textAnimations.slideIn.container}
                 initial="hidden"
@@ -127,7 +132,7 @@ const Experience = () => {
                 Explorez et interagissez
                 <br />
                 comme si vous y étiez
-              </motion.h2>
+              </motion.h3>
               <motion.div
                 variants={textAnimations.textMask.container}
                 initial="hidden"
@@ -146,7 +151,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -4,9 +4,10 @@ import { textAnimations } from '../animations/textAnimations'
 
 const ThePerformer: React.FC = () => {
   return (
-    <section>
-      <div className="">
-        <motion.h1
+    <section aria-labelledby="artistes-section" className="performer-section">
+      <div className="performer-header">
+        <motion.h2
+          id="artistes-section"
           className="text-4xl lg:text-6xl font-bold"
           variants={textAnimations.reveal.container}
           initial="hidden"
@@ -14,7 +15,7 @@ const ThePerformer: React.FC = () => {
           viewport={{ once: true }}
         >
           LES ARTISTES
-        </motion.h1>
+        </motion.h2>
         <motion.p
           className="mt-2 border-t border-gray-500 pt-2"
           variants={textAnimations.fadeIn.container}
@@ -28,15 +29,18 @@ const ThePerformer: React.FC = () => {
       <div className="mt-8 grid md:grid-cols-2 gap-8 items-center">
         <motion.img
           src="src/assets/city-skyline.png"
-          alt="City Skyline"
+          alt="Artistes performant sur une scène virtuelle Connect Stage"
           className="rounded-lg shadow-lg w-full h-auto"
+          loading="lazy"
+          width="600"
+          height="400"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         />
         <div>
-          <motion.h2
+          <motion.h3
             className="text-2xl font-bold"
             variants={textAnimations.slideIn.container}
             initial="hidden"
@@ -44,7 +48,7 @@ const ThePerformer: React.FC = () => {
             viewport={{ once: true }}
           >
             Performances virtuelles pour un public mondial
-          </motion.h2>
+          </motion.h3>
           <motion.div
             variants={textAnimations.textMask.container}
             initial="hidden"
@@ -68,6 +72,7 @@ const ThePerformer: React.FC = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
+            aria-label="Rejoindre nos artistes sur Connect Stage"
           >
             Rejoindre nos artistes ↗
           </motion.a>
