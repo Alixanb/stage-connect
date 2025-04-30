@@ -7,7 +7,10 @@ import x from './assets/x.svg'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black max-h-[800px] relative overflow-hidden hidden lg:block" aria-label="Pied de page">
+    <footer
+      className="bg-black max-h-[800px] relative overflow-hidden hidden lg:block"
+      aria-label="Pied de page"
+    >
       <img
         src={background}
         alt="Arrière-plan du footer Connect Stage"
@@ -21,7 +24,9 @@ const Footer: React.FC = () => {
           <div className="mt-24 flex justify-center">
             <img src={logo} alt="Logo Connect Stage" width={150} height={50} />
           </div>
-          <h2 className="text-white text-5xl my-20">Votre Concert, Notre Scène</h2>
+          <h2 className="text-white text-5xl my-20">
+            Votre Concert, Notre Scène
+          </h2>
           <div className="flex justify-center">
             <a
               href="/contact"
@@ -32,23 +37,57 @@ const Footer: React.FC = () => {
             </a>
           </div>
           <nav aria-label="Navigation du pied de page">
-            <ul className="flex items-center justify-center gap-12 text-base text-white mt-20">
-              <li><a href="/about" aria-label="À propos de nous">À propos</a></li>
+            <ul className="flex justify-center items-center gap-12 text-base text-white mt-20">
+              <li>
+                <a href="/experience" aria-label="Expérience">
+                  Expérience
+                </a>
+              </li>
+              <li>
+                <a href="/about" aria-label="A propos">
+                  A propos
+                </a>
+              </li>
+              <li>
+                <a href="/contact" aria-label="Contact">
+                  Contact
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
         <div className="mt-auto flex justify-between w-full px-20 py-8 border-t border-white/20">
           <div className="flex items-center gap-4">
-            <a href="https://facebook.com/connectstage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <img src={facebook} alt="Facebook" height={20} width={20} />
+            <a
+              href="https://facebook.com/connectstage"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <img src={facebook} alt="Facebook" height={12} width={12} />
             </a>
-            <a href="https://instagram.com/connectstage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a
+              href="https://instagram.com/connectstage"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
               <img src={insta} alt="Instagram" width={20} height={20} />
             </a>
-            <a href="https://twitter.com/connectstage" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <a
+              href="https://twitter.com/connectstage"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
               <img src={x} alt="Twitter" width={20} height={20} />
             </a>
-            <a href="https://linkedin.com/company/connectstage" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a
+              href="https://linkedin.com/company/connectstage"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <img src={linkedin} alt="LinkedIn" width={20} height={20} />
             </a>
           </div>
