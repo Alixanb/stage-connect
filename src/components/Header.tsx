@@ -14,21 +14,21 @@ export const Header = () => {
         style={{ maxHeight: 180 }}
       /> */}
 
-        <img
-          src="/pictures/medium_wave_2.png"
-          alt=""
-          className="pointer-events-none select-none z-0"
-          style={{
-        position: 'absolute',
-        right: 0,
-        bottom: 0,
-        maxHeight: 0,
-        width: 'auto',
-          }}
-          draggable={false}
-        />
+      <img
+        src="/pictures/medium_wave_2.png"
+        alt=""
+        className="pointer-events-none select-none z-0"
+        style={{
+          position: 'absolute',
+          right: 0,
+          bottom: 0,
+          maxHeight: 0,
+          width: 'auto',
+        }}
+        draggable={false}
+      />
 
-      <div className="relative flex flex-col text-6xl lg:text-[140px] uppercase font-medium">
+      <div className="relative flex flex-col text-6xl xl:text-9xl 2xl:text-[140px] uppercase font-medium">
         {/* Image waveBottom derrière le titre */}
         <img
           src="/pictures/medium_wave_1.png"
@@ -127,9 +127,9 @@ export const Header = () => {
             </motion.div>
           </div>
           <motion.img
-            src="/header-image.jpg"
+            src="public/pictures/overview.webp"
             alt="Expérience de concert virtuel immersif Connect Stage"
-            className="w-full aspect-square lg:aspect-auto lg:h-[350px] object-cover"
+            className="w-full aspect-square lg:aspect-auto lg:h-[500px] lg:w-[1200px] object-cover"
             loading="eager"
             width="1200"
             height="350"

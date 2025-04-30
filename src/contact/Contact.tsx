@@ -1,5 +1,5 @@
+import Mail from '@p/pictures/mail.svg'
 import React, { useState } from 'react'
-import Mail from '../../public/assets/pictures/mail.svg'
 import Layout from '../components/Layout'
 
 const Contact: React.FC = () => {
