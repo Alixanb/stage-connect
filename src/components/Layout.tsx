@@ -39,7 +39,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="relative z-10 flex flex-row p-4 justify-start text-xl text-white ml-8">
           <a href="/" target="_blank" rel="noopener noreferrer">
             <motion.img
-              src="/public/pictures/logo.png"
+              src="/pictures/logo.png"
               alt="Logo Connect Stage"
               variants={textAnimations.reveal.container}
               initial="hidden"

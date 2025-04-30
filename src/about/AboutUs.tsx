@@ -51,7 +51,7 @@ export default function AboutUs() {
             <div className="relative">
               <div className="overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src="src/assets/stage.png"
+                  src="/assets/stage.png"
                   alt="Scène virtuelle de concert Connect Stage"
                   className="w-full h-auto object-cover"
                   loading="lazy"
@@ -73,12 +73,12 @@ export default function AboutUs() {
 
         {/* Partners */}
         <img
-            src="/pictures/big_wave_2.png"
-            alt=""
-            className="w-full pointer-events-none select-none z-0"
-            style={{ maxHeight: 180 }}
-            draggable={false}
-          />
+          src="/pictures/big_wave_2.png"
+          alt=""
+          className="w-full pointer-events-none select-none z-0"
+          style={{ maxHeight: 180 }}
+          draggable={false}
+        />
         <section className="px-6 pb-12" aria-labelledby="partners-section">
           <h2 id="partners-section" className="text-8xl tracking-tight font-nickel">ARTISTES PARTENAIRES</h2>
           <div className="flex justify-between">
@@ -92,10 +92,10 @@ export default function AboutUs() {
 
           {/* Avatars */}
           <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="src/assets/artist.png" alt="Artiste partenaire 1" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-            <img src="src/assets/artist.png" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-            <img src="src/assets/artist.png" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-            <img src="src/assets/artist.png" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="/assets/artist.png" alt="Artiste partenaire 1" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="/assets/artist.png" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="/assets/artist.png" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="/assets/artist.png" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
           </div>
         </section>
       </div>
