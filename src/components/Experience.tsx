@@ -129,7 +129,7 @@ const Experience = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                Explorez et interagissez
+                Explorez et intéragissez
                 <br />
                 comme si vous y étiez
               </motion.h3>
@@ -144,7 +144,7 @@ const Experience = () => {
                   variants={textAnimations.textMask.item}
                   style={{ overflow: 'hidden' }}
                 >
-                  Connect Stage n'est pas seulement un site de diffusion en ligne, c'est un espace virtuel où chaque utilisateur peut s'immerger totalement dans l'ambiance d'un concert. Notre technologie 3D vous permet d'explorer librement une salle de concert virtuelle, de vous déplacer à votre guise, d'interagir avec d'autres participants et de vivre le concert comme si vous étiez au cœur de l'événement. Les artistes peuvent ainsi toucher un public mondial tout en offrant une expérience authentique et immersive.
+                  Connect Stage n'est pas seulement un site de diffusion en ligne, c'est un espace virtuel où chaque utilisateur peut s'immerger totalement dans l'ambiance d'un concert. Notre technologie 3D vous permet d'explorer librement une salle de concert virtuelle, de vous déplacer à votre guise, d'intéragir avec d'autres participants et de vivre le concert comme si vous étiez au cœur de l'événement. Les artistes peuvent ainsi toucher un public mondial tout en offrant une expérience authentique et immersive.
                 </motion.p>
               </motion.div>
             </div>

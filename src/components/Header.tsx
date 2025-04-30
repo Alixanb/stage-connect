@@ -73,7 +73,7 @@ export const Header = () => {
             className="text-base lg:text-end max-w-[500px] shrink normal-case font-normal hidden lg:block"
             variants={textAnimations.paragraph.item}
           >
-            Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, interagir et vivre le concert comme si vous y étiez réellement.
+            Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, intéragir et vivre le concert comme si vous y étiez réellement.
           </motion.p>
           <motion.span
             className="lg:shrink-0 lg:whitespace-nowrap"
@@ -96,7 +96,7 @@ export const Header = () => {
           className="text-base lg:text-end max-w-[500px] shrink normal-case font-normal block lg:hidden"
           variants={textAnimations.paragraph.item}
         >
-          Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, interagir et vivre le concert comme si vous y étiez réellement.
+          Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, intéragir et vivre le concert comme si vous y étiez réellement.
         </motion.p>
       </div>
       <section className="mt-12 bg-[#86182F] p-2 flex flex-col gap-4" aria-label="Accès à l'expérience Connect Stage">

@@ -36,13 +36,13 @@ export default function AboutUs() {
                 Immersion totale <br /> dans l'expérience concert
               </h2>
               <p className="text-white/70 text-base mb-6 max-w-xl">
-                Connect Stage vous offre la possibilité d'assister à un concert sans quitter votre domicile, tout en ayant l'impression d'y être réellement. Notre plateforme vous permet d'explorer librement une salle de concert virtuelle, où vous pouvez vous promener, interagir et vivre le concert comme si vous étiez au cœur de l'événement.
+                Connect Stage vous offre la possibilité d'assister à un concert sans quitter votre domicile, tout en ayant l'impression d'y être réellement. Notre plateforme vous permet d'explorer librement une salle de concert virtuelle, où vous pouvez vous promener, intéragir et vivre le concert comme si vous étiez au cœur de l'événement.
               </p>
               <p className="text-white/70 text-base mb-6 max-w-xl">
                 Que vous soyez dans l'impossibilité de vous rendre à un concert à cause de problèmes de mobilité, de santé ou de phobie de la foule, ou que vous soyez simplement éloigné géographiquement, Connect Stage vous permet de vivre pleinement l'expérience concert depuis n'importe où.
               </p>
               <p className="text-white/70 text-base mb-6 max-w-xl">
-                Les artistes peuvent ainsi se produire en ligne dans un environnement virtuel réaliste, atteignant un public mondial, tout en augmentant la visibilité de leur merchandising grâce à des liens directs vers leurs boutiques en ligne.
+                Les artistes peuvent ainsi se produire en ligne dans un environnement virtuel réaliste, atteignant un public mondial, tout en augmentant la visibilité de leur merchandising grâce à des liens directs vers leur boutique en ligne.
               </p>
               <div className="max-w-7xl mx-auto mt-6 text-white/70 text-sm md:text-base">
                 <a href="/experience" className="text-sky-300 underline mt-2 inline-block" aria-label="Découvrir l'expérience Connect Stage">

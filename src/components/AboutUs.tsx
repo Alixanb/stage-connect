@@ -35,7 +35,7 @@ export const AboutUs = () => {
             variants={textAnimations.textMask.item}
             style={{ overflow: 'hidden' }}
           >
-            Connect Stage vous offre la possibilité d'assister à un concert sans quitter votre domicile, tout en ayant l'impression d'y être réellement. Explorez librement une salle de concert virtuelle, où vous pouvez vous promener, interagir et vivre l'événement comme si vous étiez au cœur de l'action. Notre technologie 3D crée une immersion totale dans l'ambiance du concert.
+            Connect Stage vous offre la possibilité d'assister à un concert sans quitter votre domicile, tout en ayant l'impression d'y être réellement. Explorez librement une salle de concert virtuelle, où vous pouvez vous promener, intéragir et vivre l'événement comme si vous étiez au cœur de l'action. Notre technologie 3D crée une immersion totale dans l'ambiance du concert.
           </motion.p>
         </motion.div>
         <motion.a
