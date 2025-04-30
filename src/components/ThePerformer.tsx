@@ -28,7 +28,7 @@ const ThePerformer: React.FC = () => {
       </div>
       <div className="mt-8 grid md:grid-cols-2 gap-8 items-center">
         <motion.img
-          src="../../public/assets/pictures/caroussel_1.webp"
+          src="/pictures/caroussel_1.webp"
           alt="Artistes performant sur une scène virtuelle Connect Stage"
           className="rounded-lg shadow-lg w-full h-auto"
           loading="lazy"

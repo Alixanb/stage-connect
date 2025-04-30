@@ -1,7 +1,7 @@
+import artist from '@p/pictures/artist.png'
+import deco_artist from '@p/pictures/deco_artist.png'
+import deco_logo from '@p/pictures/deco_logo.svg'
 import Layout from '../components/Layout'
-import deco_artist from '../../public/assets/pictures/deco_artist.png'
-import deco_logo from '../../public/assets/pictures/deco_logo.svg'
-import artist from '../../public/assets/pictures/artist.png'
 
 export default function Artist() {
   return (
