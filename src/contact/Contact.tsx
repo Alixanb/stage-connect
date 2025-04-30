@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
     <Layout>
       <div className="min-h-screen bg-black p-16 grid grid-cols-2 gap-10">
         <div className="flex flex-col justify-center items-start">
-          <div className="flex items-center text-[80px] uppercase font-medium text-left p-5 border-b border-gray-500 pb-2">
+          <div className="font-nickel flex items-center text-[80px] uppercase font-medium text-left p-5 border-b border-gray-500 pb-2">
             <img src={Mail} alt="mail" className="mr-4" width="120" height="120" />
             <span>Contactez-nous</span>
           </div>
@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
             <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
-                  <label htmlFor="email" className="block mb-2 text-sm font-medium">
+                  <label htmlFor="email" className="block mb-2 font-mediu text-xl font-apotek-medium">
                     Votre e-mail
                   </label>
                   <input
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="type" className="block mb-2 text-sm font-medium">
+                  <label htmlFor="type" className="block mb-2 text-xl font-apotek-medium font-medium">
                     Type de message
                   </label>
                   <select
@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block mb-2 text-sm font-medium">
+                  <label htmlFor="subject" className="block mb-2 text-xl font-apotek-medium font-medium">
                     Sujet
                   </label>
                   <input
@@ -92,7 +92,7 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="message" className="block mb-2 text-sm font-medium">
+                  <label htmlFor="message" className="block mb-2 text-xl font-apotek-medium font-medium">
                     Votre message
                   </label>
                   <textarea
@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
                 </div>
                 <button
                   type="submit"
-                  className="text-black bg-white text-xl py-4 px-24 rounded-full cursor-pointer hover:bg-gray-100 transition-colors disabled:opacity-70"
+                  className="font-nickel text-black bg-white text-xl py-4 px-24 rounded-full cursor-pointer hover:bg-gray-100 transition-colors disabled:opacity-70"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Envoi en cours..." : "Envoyer"}
