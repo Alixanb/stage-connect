@@ -5,16 +5,6 @@ import { textAnimations } from '../animations/textAnimations';
 export const Header = () => {
   return (
     <header className="flex flex-col gap-4 container mx-auto px-4">
-      <div className="flex h-[170px] text-[#979797] tracking-tighter font-bold">
-        <motion.h1
-          variants={textAnimations.reveal.container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          Connect Stage - Expérience immersive de concerts virtuels en 3D.
-        </motion.h1>
-      </div>
       <div className="flex flex-col text-6xl lg:text-[140px] uppercase font-medium">
         <motion.div
           className="flex gap-12 items-center"
