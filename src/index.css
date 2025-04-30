@@ -3,9 +3,73 @@
 /* Nickel Gothic Variable Regular */
 @font-face {
   font-family: 'NickelGothic';
-  src: url('@/assets/fonts/NickelGothic/Nickel_Gothic_Variable_Regular.otf') format('opentype');
+  src: url('/assets/fonts/Nickel_Gothic_Variable_Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+/* Apotek Comp Medium */
+@font-face {
+  font-family: 'ApotekCompMedium';
+  src: url('/assets/fonts/Apotek_Comp_Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apotek Comp Regular */
+@font-face {
+  font-family: 'ApotekCompRegular';
+  src: url('/assets/fonts/Apotek_Comp_Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utilitaires Tailwind personnalisés */
+.font-nickel {
+  font-family: 'NickelGothic', sans-serif !important;
+}
+.font-apotek-medium {
+  font-family: 'ApotekCompMedium', sans-serif !important;
+}
+.font-apotek-regular {
+  font-family: 'ApotekCompRegular', sans-serif !important;
+}
+
+.text-primary{
+  color : #86182f !important;
+}
+
+.text-secondary{
+  color : #00705d !important;
+}
+
+.hover\:text-primary:hover {
+  color: #86182f !important;
+}
+
+.link-underline-animate {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link-underline-animate::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 2px;
+  background: #00705d; /* couleur secondary */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.link-underline-animate:hover::after,
+.link-underline-animate:focus::after {
+  transform: scaleX(1);
+}
