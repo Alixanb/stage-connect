@@ -10,41 +10,16 @@ import { CharacterController } from "./CharacterController";
 import { InteractiveElements } from "./InteractiveElements";
 import { Map } from "./Map";
 
-type MapName = 'castle_on_hills' | 'animal_crossing_map' | 'city_scene_tokyo' | 'de_dust_2_with_real_light' | 'medieval_fantasy_book' | 'salle_numatrouffe';
+type MapName = 'salle_numatrouffe';
 
 type MapConfig = {
-  [key in MapName]: {
-    scale: number;
-    position: number[];
-  }
+  scale: number;
+  position: number[];
 };
 
-const maps: MapConfig = {
-  salle_numatrouffe: {
-    scale: 0.3,
-    position: [0, -2, 0],
-  },
-  castle_on_hills: {
-    scale: 3,
-    position: [-6, -7, 0],
-  },
-  animal_crossing_map: {
-    scale: 20,
-    position: [-15, -1, 10],
-  },
-  city_scene_tokyo: {
-    scale: 0.72,
-    position: [0, -1, -3.5],
-  },
-  de_dust_2_with_real_light: {
-    scale: 0.3,
-    position: [-5, -3, 13],
-  },
-  medieval_fantasy_book: {
-    scale: 0.4,
-    position: [-4, 0, -6],
-  },
-
+const mapConfig: MapConfig = {
+  scale: 0.5,
+  position: [0, -2, 0],
 };
 
 export const Experience = () => {
@@ -52,7 +27,7 @@ export const Experience = () => {
   const { map } = useControls("Map", {
     map: {
       value: "salle_numatrouffe" as MapName,
-      options: Object.keys(maps) as MapName[],
+      options: ["salle_numatrouffe"] as MapName[],
     },
   });
 
@@ -79,8 +54,8 @@ export const Experience = () => {
       </directionalLight>
       <Physics debug>
         <Map
-          scale={maps[map].scale}
-          position={maps[map].position}
+          scale={mapConfig.scale}
+          position={mapConfig.position}
           model={`models/${map}.glb`}
         />
         <CharacterController />
