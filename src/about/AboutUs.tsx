@@ -12,7 +12,7 @@ export default function AboutUs() {
       </Helmet>
       <div className="bg-black text-white">
         {/* Header */}
-        <section className="bg-[#B01E3B] py-8 px-6 flex items-center gap-6 md:gap-8">
+        <section className="bg-[#B01E3B] py-8 px-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 text-center md:text-left">
           <svg width="160" height="160" viewBox="0 0 140 141" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               fillRule="evenodd"
@@ -22,7 +22,7 @@ export default function AboutUs() {
             />
           </svg>
           <h1 className="text-5xl md:text-6xl font-black tracking-wide">À PROPOS</h1>
-          <p className="ml-auto text-xs md:text-sm max-w-xs md:max-w-sm text-right leading-tight">
+          <p className="text-xs md:text-sm max-w-xs md:max-w-sm md:ml-auto leading-tight">
             Connect Stage est une plateforme immersive pour vivre des concerts virtuels en 3D.
           </p>
         </section>
@@ -77,12 +77,13 @@ export default function AboutUs() {
 
         {/* Partners */}
         <section className="px-6 py-12" aria-labelledby="partners-section">
-          <h2 id="partners-section" className="text-8xl tracking-tight">ARTISTES PARTENAIRES</h2>
-          <div className="flex justify-between">
-            <p className="mt-2 text-sm text-gray-400">
+        <h2 id="partners-section" className="text-4xl md:text-6xl lg:text-8xl tracking-tight text-center md:text-left">
+        ARTISTES PARTENAIRES</h2>
+        <div className="flex flex-col md:flex-row justify-between gap-4">
+        <p className="mt-2 text-sm text-gray-400 text-center md:text-left">
               Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
             </p>
-            <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg className="mx-auto" width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g clipPath="url(#clip0_82_119)">
                 <mask id="mask0_82_119" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="101">
                   <path d="M100 0.5H0V100.5H100V0.5Z" fill="white" />
@@ -97,7 +98,7 @@ export default function AboutUs() {
                 </clipPath>
               </defs>
             </svg>
-            <p className="text-8xl tracking-tight">
+            <p className="text-4xl md:text-6xl lg:text-8xl tracking-tight text-center md:text-left">
               COLLABORATIONS
             </p>
           </div>
