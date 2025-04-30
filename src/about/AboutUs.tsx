@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Layout from "../components/Layout";
 
 export default function AboutUs() {
@@ -77,10 +77,10 @@ export default function AboutUs() {
 
         {/* Partners */}
         <section className="px-6 py-12" aria-labelledby="partners-section">
-        <h2 id="partners-section" className="text-4xl md:text-6xl lg:text-8xl tracking-tight text-center md:text-left">
-        ARTISTES PARTENAIRES</h2>
-        <div className="flex flex-col md:flex-row justify-between gap-4">
-        <p className="mt-2 text-sm text-gray-400 text-center md:text-left">
+          <h2 id="partners-section" className="text-4xl md:text-6xl lg:text-8xl tracking-tight text-center md:text-left">
+            ARTISTES PARTENAIRES</h2>
+          <div className="flex flex-col md:flex-row justify-between gap-4">
+            <p className="mt-2 text-sm text-gray-400 text-center md:text-left">
               Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
             </p>
             <svg className="mx-auto" width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

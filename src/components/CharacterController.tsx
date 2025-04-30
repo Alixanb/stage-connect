@@ -7,13 +7,13 @@ import { Group, MathUtils, Vector3 } from "three";
 import { degToRad } from "three/src/math/MathUtils.js";
 import { Character } from "./Character";
 
-const normalizeAngle = (angle) => {
+const normalizeAngle = (angle: number): number => {
   while (angle > Math.PI) angle -= 2 * Math.PI;
   while (angle < -Math.PI) angle += 2 * Math.PI;
   return angle;
 };
 
-const lerpAngle = (start, end, t) => {
+const lerpAngle = (start: number, end: number, t: number): number => {
   start = normalizeAngle(start);
   end = normalizeAngle(end);
 
