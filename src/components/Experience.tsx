@@ -60,7 +60,7 @@ const Experience = () => {
 
   return (
     <section className="bg-black text-white py-20" aria-labelledby="experience-section">
-      <div className="mb-20">
+      <div className="container mx-auto px-4 mb-20">
         <motion.h2
           id="experience-section"
           className="font-bold text-4xl lg:text-6xl uppercase"

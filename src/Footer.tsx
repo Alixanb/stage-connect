@@ -32,12 +32,8 @@ const Footer: React.FC = () => {
             </a>
           </div>
           <nav aria-label="Navigation du pied de page">
-            <ul className="flex items-center gap-12 text-base text-white mt-20">
-              <li><a href="/about" aria-label="À propos de l'entreprise">L'entreprise</a></li>
-              <li><a href="/about#vision" aria-label="Notre vision">Vision</a></li>
+            <ul className="flex items-center justify-center gap-12 text-base text-white mt-20">
               <li><a href="/about" aria-label="À propos de nous">À propos</a></li>
-              <li><a href="/about#carrieres" aria-label="Nos offres d'emploi">Carrières</a></li>
-              <li><a href="/blog" aria-label="Actualités et blog">Actualités</a></li>
             </ul>
           </nav>
         </div>
