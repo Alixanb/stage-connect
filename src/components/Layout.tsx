@@ -81,7 +81,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             )
         }
       </header>
-      <main id="main-content" className="p-4 flex-1">
+      <main id="main-content" className="p-4 flex-1 overflow-x-hidden">
         {children}
       </main>
       <Footer />
