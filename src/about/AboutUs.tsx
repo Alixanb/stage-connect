@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Layout from "../components/Layout";
 
 export default function AboutUs() {
@@ -12,7 +12,7 @@ export default function AboutUs() {
       </Helmet>
       <div className="bg-black text-white">
         {/* Header */}
-        <section className="bg-[#B01E3B] py-8 px-6 flex items-center gap-6 md:gap-8">
+        <section className="bg-[#B01E3B] py-8 px-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 text-center md:text-left">
           <svg width="160" height="160" viewBox="0 0 140 141" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               fillRule="evenodd"
@@ -21,8 +21,8 @@ export default function AboutUs() {
               fill="#28927C"
             />
           </svg>
-          <h1 className="text-5xl md:text-6xl font-black tracking-wide">À PROPOS</h1>
-          <p className="ml-auto text-xs md:text-sm max-w-xs md:max-w-sm text-right leading-tight">
+          <h1 className="text-5xl md:text-6xl font-black tracking-wide font-nickel">À PROPOS</h1>
+          <p className="ml-auto text-lg md:text-xl max-w-xs md:max-w-sm text-right leading-tight font-apotek-medium">
             Connect Stage est une plateforme immersive pour vivre des concerts virtuels en 3D.
           </p>
         </section>
@@ -31,21 +31,21 @@ export default function AboutUs() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             {/* Colonne gauche */}
             <div className="h-full">
-              <p className="text-sm font-medium text-white/60 mb-4">Pourquoi nous choisir</p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              <p className="text-lg font-medium text-white/60 mb-4 font-apotek-regular">Pourquoi nous choisir</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight font-nickel">
                 Immersion totale <br /> dans l'expérience concert
               </h2>
-              <p className="text-white/70 text-base mb-6 max-w-xl">
+              <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
                 Connect Stage vous offre la possibilité d'assister à un concert sans quitter votre domicile, tout en ayant l'impression d'y être réellement. Notre plateforme vous permet d'explorer librement une salle de concert virtuelle, où vous pouvez vous promener, interagir et vivre le concert comme si vous étiez au cœur de l'événement.
               </p>
-              <p className="text-white/70 text-base mb-6 max-w-xl">
+              <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
                 Que vous soyez dans l'impossibilité de vous rendre à un concert à cause de problèmes de mobilité, de santé ou de phobie de la foule, ou que vous soyez simplement éloigné géographiquement, Connect Stage vous permet de vivre pleinement l'expérience concert depuis n'importe où.
               </p>
-              <p className="text-white/70 text-base mb-6 max-w-xl">
+              <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
                 Les artistes peuvent ainsi se produire en ligne dans un environnement virtuel réaliste, atteignant un public mondial, tout en augmentant la visibilité de leur merchandising grâce à des liens directs vers leurs boutiques en ligne.
               </p>
-              <div className="max-w-7xl mx-auto mt-6 text-white/70 text-sm md:text-base">
-                <a href="/experience" className="text-sky-300 underline mt-2 inline-block" aria-label="Découvrir l'expérience Connect Stage">
+              <div className="max-w-7xl mx-auto mt-6 text-secondary text-sm md:text-base">
+                <a href="/experience" className="underline mt-2 inline-block text-secondary font-apotek-medium text-lg" aria-label="Découvrir l'expérience Connect Stage">
                   Découvrir l'expérience
                 </a>
               </div>
@@ -66,8 +66,8 @@ export default function AboutUs() {
 
               {/* Badge + texte par-dessus l'image */}
               <div className="absolute bottom-0 left-0 w-full bg-[#b11f30] text-white px-4 py-3 rounded-b-xl">
-                <p className="text-sm font-semibold">Expérience 3D</p>
-                <p className="text-sm">
+                <p className="text-lg font-semibold font-nickel">Expérience 3D</p>
+                <p className="text-lg font-apotek-medium">
                   Avec Connect Stage, l'immersion dans un concert devient accessible à tous, où que vous soyez et quand vous le souhaitez.
                 </p>
               </div>
@@ -77,12 +77,13 @@ export default function AboutUs() {
 
         {/* Partners */}
         <section className="px-6 py-12" aria-labelledby="partners-section">
-          <h2 id="partners-section" className="text-8xl tracking-tight">ARTISTES PARTENAIRES</h2>
-          <div className="flex justify-between">
-            <p className="mt-2 text-sm text-gray-400">
+          <h2 id="partners-section" className="text-4xl md:text-6xl lg:text-8xl tracking-tight text-center md:text-left">
+            ARTISTES PARTENAIRES</h2>
+          <div className="flex flex-col md:flex-row justify-between gap-4">
+            <p className="mt-2 text-sm text-gray-400 text-center md:text-left">
               Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
             </p>
-            <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg className="mx-auto" width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g clipPath="url(#clip0_82_119)">
                 <mask id="mask0_82_119" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="101">
                   <path d="M100 0.5H0V100.5H100V0.5Z" fill="white" />
@@ -97,8 +98,8 @@ export default function AboutUs() {
                 </clipPath>
               </defs>
             </svg>
-            <p className="text-8xl tracking-tight">
-              COLLABORATIONS
+            <p className="text-8xl tracking-tight font-nickel uppercase">
+              Collaborations
             </p>
           </div>
 

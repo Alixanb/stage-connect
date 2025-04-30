@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { textAnimations } from '../animations/textAnimations'
+import { useEffect, useRef, useState } from 'react'
+import {
+  textAnimations
+} from '../animations/textAnimations'
 import cityImage from '../assets/city.png'
 import humanImage from '../assets/human.png'
 import motelImage from '../assets/motel.png'
@@ -9,6 +11,8 @@ import windowImage from '../assets/window.png'
 
 const Experience = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(true)
+  const intervalRef = useRef<number | null>(null)
 
   const slides = [
     {
@@ -79,12 +83,35 @@ const Experience = () => {
     },
   ]
 
+  useEffect(() => {
+    if (isPlaying) {
+      intervalRef.current = window.setInterval(() => {
+        nextSlide()
+      }, 5000)
+    }
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+      }
+    }
+  }, [isPlaying])
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
+
+  const toggleAutoplay = () => {
+    setIsPlaying((prev) => !prev)
+  }
+
+  const handleNavigation = (callback: () => void) => {
+    // Pause autoplay when manually navigating
+    setIsPlaying(false)
+    callback()
   }
 
   return (
@@ -105,7 +132,7 @@ const Experience = () => {
         </motion.h2>
 
         <motion.p
-          className="font-bold text-4xl lg:text-6xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit"
+          className="font-bold text-4xl lg:text-6xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit font-nickel"
           variants={textAnimations.paragraph.container}
           initial="hidden"
           whileInView="visible"
@@ -179,6 +206,30 @@ const Experience = () => {
                     strokeLinecap="square"
                   />
                 </svg>
+              </button>
+              <button onClick={toggleAutoplay} className="group ml-4">
+                {isPlaying ? (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="6" y="4" width="4" height="16" fill="white" />
+                    <rect x="14" y="4" width="4" height="16" fill="white" />
+                  </svg>
+                ) : (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M6 4L20 12L6 20V4Z" fill="white" />
+                  </svg>
+                )}
               </button>
             </div>
 
