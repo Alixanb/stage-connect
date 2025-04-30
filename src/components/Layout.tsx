@@ -37,16 +37,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="site-wrapper">
       <header className="flex justify-between">
-        <div className="relative z-10 flex flex-row p-4 justify-start text-xl text-white ml-8">
-          <motion.h1
-            variants={textAnimations.reveal.container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            Connect Stage - Expérience immersive de concerts virtuels en 3D.
-          </motion.h1>
-        </div>
+      <div className="relative z-10 flex flex-row p-4 justify-start text-xl text-white ml-8">
+        <motion.img
+          src="src/assets/logo_footer.svg"
+          alt="Logo Connect Stage"
+          variants={textAnimations.reveal.container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="w-32 h-auto"
+        />
+    </div>
         {
           isMobile ? (
             <div className="p-4">
