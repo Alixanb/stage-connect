@@ -3,9 +3,38 @@
 /* Nickel Gothic Variable Regular */
 @font-face {
   font-family: 'NickelGothic';
-  src: url('@/assets/fonts/NickelGothic/Nickel_Gothic_Variable_Regular.otf') format('opentype');
+  src: url('/assets/fonts/Nickel_Gothic_Variable_Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+/* Apotek Comp Medium */
+@font-face {
+  font-family: 'ApotekCompMedium';
+  src: url('/assets/fonts/Apotek_Comp_Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apotek Comp Regular */
+@font-face {
+  font-family: 'ApotekCompRegular';
+  src: url('/assets/fonts/Apotek_Comp_Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utilitaires Tailwind personnalisés */
+.font-nickel {
+  font-family: 'NickelGothic', sans-serif !important;
+}
+.font-apotek-medium {
+  font-family: 'ApotekCompMedium', sans-serif !important;
+}
+.font-apotek-regular {
+  font-family: 'ApotekCompRegular', sans-serif !important;
 }
 

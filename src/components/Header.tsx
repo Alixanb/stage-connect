@@ -54,6 +54,7 @@ export const Header = () => {
             </g>
           </motion.svg>
           <motion.span
+            className="font-nickel"
             variants={textAnimations.slideIn.container}
             initial="hidden"
             whileInView="visible"
@@ -63,14 +64,14 @@ export const Header = () => {
           </motion.span>
         </motion.div>
         <motion.div
-          className="flex gap-8 justify-between items-center"
+          className="flex gap-8 justify-between items-center font-nickel"
           variants={textAnimations.paragraph.container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <motion.p
-            className="text-base lg:text-end max-w-[500px] shrink normal-case font-normal hidden lg:block"
+            className="text-base lg:text-end max-w-[500px] shrink normal-case font-normal hidden lg:block font-apotek-medium text-xl"
             variants={textAnimations.paragraph.item}
           >
             Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, interagir et vivre le concert comme si vous y étiez réellement.
@@ -84,7 +85,7 @@ export const Header = () => {
 
         </motion.div>
         <motion.div
-          className="lg:text-center"
+          className="lg:text-center font-nickel"
           variants={textAnimations.clipReveal.container}
           initial="hidden"
           whileInView="visible"
@@ -107,7 +108,7 @@ export const Header = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="flex justify-between uppercase font-medium tracking-wide">
+          <div className="flex justify-between uppercase font-medium tracking-wide font-apotek-regular">
             <motion.div
               className="flex gap-2 items-center"
               initial={{ opacity: 0 }}
@@ -148,7 +149,7 @@ export const Header = () => {
           >
             <motion.a
               href="/experience"
-              className="hover:underline py-1 px-16 bg-white text-black flex items-center gap-2"
+              className="hover:underline py-1 px-16 bg-white text-black flex items-center gap-2 font-apotek-regular text-lg lg:text-2xl"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
               aria-label="Commencer l'expérience Connect Stage"
@@ -158,7 +159,7 @@ export const Header = () => {
             </motion.a>
             <motion.a
               href="/about"
-              className="hover:underline py-1 px-16 border border-white flex items-center gap-2"
+              className="hover:underline py-1 px-16 border border-white flex items-center gap-2 font-apotek-regular text-lg lg:text-2xl"
               aria-label="En savoir plus sur Connect Stage"
             >
               En savoir plus
@@ -171,7 +172,7 @@ export const Header = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <span className="mx-8 lg:mx-0 lg:w-1/3 text-center">
+            <span className="mx-8 lg:mx-0 lg:w-1/3 text-center font-apotek-regular text-lg">
               Connect Stage vous offre une expérience immersive unique pour vivre les concerts à domicile.
             </span>
           </motion.div>
