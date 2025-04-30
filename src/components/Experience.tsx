@@ -56,7 +56,7 @@ export const Experience = () => {
         <Map
           scale={mapConfig.scale}
           position={mapConfig.position}
-          model={`models/${map}.glb`}
+          model={`models/${map}.glTF`}
         />
         <CharacterController />
         <InteractiveElements />
