@@ -47,28 +47,28 @@ const BurgerMenu: React.FC = () => {
           <Link
             to="/"
             onClick={toggleMenu}
-            className="hover:underline hover:text-white"
+            className="hover:underline hover:text-primary font-nickel"
           >
             Accueil
           </Link>
           <Link
             to="/experience"
             onClick={toggleMenu}
-            className="hover:underline hover:text-white"
+            className="hover:underline hover:text-white font-nickel"
           >
             Expérience
           </Link>
           <Link
             to="/about"
             onClick={toggleMenu}
-            className="hover:underline hover:text-white"
+            className="hover:underline hover:text-white font-nickel"
           >
             À propos
           </Link>
           <Link
             to="/contact"
             onClick={toggleMenu}
-            className="hover:underline hover:text-white"
+            className="hover:underline hover:text-white font-nickel"
           >
             Contact
           </Link>
