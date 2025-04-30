@@ -1,20 +1,21 @@
-import React from 'react'
 import { motion } from 'framer-motion'
+import React from 'react'
 import { textAnimations } from '../animations/textAnimations'
 
 const ThePerformer: React.FC = () => {
   return (
-    <section>
-      <div className="">
-        <motion.h1
-          className="text-6xl font-bold"
+    <section aria-labelledby="artistes-section" className="performer-section">
+      <div className="performer-header">
+        <motion.h2
+          id="artistes-section"
+          className="text-4xl lg:text-6xl font-bold"
           variants={textAnimations.reveal.container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          THE PERFORMER
-        </motion.h1>
+          LES ARTISTES
+        </motion.h2>
         <motion.p
           className="mt-2 border-t border-gray-500 pt-2"
           variants={textAnimations.fadeIn.container}
@@ -22,30 +23,32 @@ const ThePerformer: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Lorem Elsass ipsum knack schneck libero. Carola Racing. non tellus
-          Mauris
+          Une visibilité mondiale pour tous les talents
         </motion.p>
       </div>
       <div className="mt-8 grid md:grid-cols-2 gap-8 items-center">
         <motion.img
           src="src/assets/city-skyline.png"
-          alt="City Skyline"
+          alt="Artistes performant sur une scène virtuelle Connect Stage"
           className="rounded-lg shadow-lg w-full h-auto"
+          loading="lazy"
+          width="600"
+          height="400"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         />
         <div>
-          <motion.h2
+          <motion.h3
             className="text-2xl font-bold"
             variants={textAnimations.slideIn.container}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            Lorem Elsass ipsum knack.
-          </motion.h2>
+            Performances virtuelles pour un public mondial
+          </motion.h3>
           <motion.div
             variants={textAnimations.textMask.container}
             initial="hidden"
@@ -57,10 +60,7 @@ const ThePerformer: React.FC = () => {
               variants={textAnimations.textMask.item}
               style={{ overflow: 'hidden' }}
             >
-              Lorem Elsass ipsum knack schneck libero. Carola Racing. non tellus
-              Mauris knepfle libero, Salut bisamme id ac senectus flammekueche
-              leverwurscht Heineken Pellentesque elit tchao bissame sed Chulien
-              eleifend so auctor, in, nullam Pfourtz ! risus, salu wie turpis.
+              Les artistes peuvent se produire en ligne dans un environnement virtuel réaliste, atteignant un public mondial, tout en augmentant la visibilité de leur merchandising grâce à des liens directs vers leurs boutiques en ligne. Avec Connect Stage, développez votre audience et créez des expériences uniques pour vos fans, où qu'ils soient et quand ils le souhaitent.
             </motion.p>
           </motion.div>
           <motion.a
@@ -72,8 +72,9 @@ const ThePerformer: React.FC = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
+            aria-label="Rejoindre nos artistes sur Connect Stage"
           >
-            See on Spotify ↗
+            Rejoindre nos artistes ↗
           </motion.a>
         </div>
       </div>
