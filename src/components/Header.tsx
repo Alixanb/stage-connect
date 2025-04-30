@@ -6,6 +6,16 @@ export const Header = () => {
   return (
     <header className="flex flex-col gap-4">
       <div className="flex h-[170px] text-[#979797] tracking-tighter font-bold">
+      <motion.img
+          src="src/assets/Logo-Connect_Stage-Version_Rouge_Horizontal.png"
+          alt="Logo Connect Stage"
+          className="w-50 h-30"
+          loading="eager"
+          initial={{ opacity: 0, scale: 1.05 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        />
         <motion.h1
           variants={textAnimations.reveal.container}
           initial="hidden"
