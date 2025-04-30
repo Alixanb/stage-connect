@@ -4,7 +4,7 @@ import { textAnimations } from '../animations/textAnimations';
 
 export const Header = () => {
   return (
-    <header className="flex flex-col gap-4">
+    <header className="flex flex-col gap-4 container mx-auto px-4">
       <div className="flex h-[170px] text-[#979797] tracking-tighter font-bold">
         <motion.h1
           variants={textAnimations.reveal.container}
@@ -99,7 +99,7 @@ export const Header = () => {
           Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, interagir et vivre le concert comme si vous y étiez réellement.
         </motion.p>
       </div>
-      <section className="mt-12 bg-[#86182F] p-2 flex flex-col gap-4" aria-label="Accès à l'expérience Connect Stage">
+      <section className="mt-12 bg-[#86182F] p-2 flex flex-col gap-4 max-w-[1600px] mx-auto" aria-label="Accès à l'expérience Connect Stage">
         <motion.div
           className="mt-12 bg-[#86182F] p-2 flex flex-col gap-4"
           initial={{ opacity: 0, y: 30 }}
