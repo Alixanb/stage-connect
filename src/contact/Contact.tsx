@@ -1,6 +1,6 @@
-import Mail from '@p/pictures/mail.svg'
 import React, { useState } from 'react'
 import Layout from '../components/Layout'
+import Mail from '/pictures/mail.svg'
 
 const Contact: React.FC = () => {
   const [email, setEmail] = useState('')

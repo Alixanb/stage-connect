@@ -73,12 +73,12 @@ export default function AboutUs() {
 
         {/* Partners */}
         <img
-            src="/pictures/big_wave_2.png"
-            alt=""
-            className="w-full pointer-events-none select-none z-0"
-            style={{ maxHeight: 180 }}
-            draggable={false}
-          />
+          src="/pictures/big_wave_2.png"
+          alt=""
+          className="w-full pointer-events-none select-none z-0"
+          style={{ maxHeight: 180 }}
+          draggable={false}
+        />
         <section className="px-6 pb-12" aria-labelledby="partners-section">
           <h2 id="partners-section" className="text-8xl tracking-tight font-nickel">ARTISTES PARTENAIRES</h2>
           <div className="flex justify-between">
@@ -96,6 +96,7 @@ export default function AboutUs() {
             <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
             <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
             <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+    
           </div>
         </section>
       </div>
