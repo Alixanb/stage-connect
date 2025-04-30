@@ -4,7 +4,7 @@ import AboutUs from "./about/AboutUs";
 import NotFound from "./components/NotFound";
 import Contact from "./contact/Contact";
 import ExperiencePage from "./experience/page";
-import Home from "./hompage/Home";
+import Home from "./homepage/Home";
 
 // Déclaration pour TypeScript
 declare global {

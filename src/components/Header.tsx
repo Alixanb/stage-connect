@@ -4,17 +4,7 @@ import { textAnimations } from '../animations/textAnimations';
 
 export const Header = () => {
   return (
-    <header className="flex flex-col gap-4">
-      <div className="flex h-[170px] text-[#979797] tracking-tighter font-bold">
-        <motion.h1
-          variants={textAnimations.reveal.container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          Connect Stage est une plateforme
-        </motion.h1>
-      </div>
+    <header className="flex flex-col gap-4 container mx-auto px-4">
       <div className="flex flex-col text-6xl lg:text-[140px] uppercase font-medium">
         <motion.div
           className="flex gap-12 items-center"
@@ -100,7 +90,7 @@ export const Header = () => {
           Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, interagir et vivre le concert comme si vous y étiez réellement.
         </motion.p>
       </div>
-      <section className="mt-12 bg-[#86182F] p-2 flex flex-col gap-4" aria-label="Accès à l'expérience Connect Stage">
+      <section className="mt-12 bg-[#86182F] p-2 flex flex-col gap-4 max-w-[1600px] mx-auto" aria-label="Accès à l'expérience Connect Stage">
         <motion.div
           className="mt-12 bg-[#86182F] p-2 flex flex-col gap-4"
           initial={{ opacity: 0, y: 30 }}
