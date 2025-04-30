@@ -6,7 +6,7 @@ export const AboutUs = () => {
   return (
     <div className="my-16 lg:my-[260px] grid grid-cols-1 lg:grid-cols-2 gap-4">
       <motion.h2
-        className="font-bold text-xl"
+        className="font-bold text-4xl font-apotek-medium"
         variants={textAnimations.reveal.container}
         initial="hidden"
         whileInView="visible"
@@ -16,7 +16,7 @@ export const AboutUs = () => {
       </motion.h2>
       <article className="flex flex-col gap-6">
         <motion.h3
-          className="font-bold text-4xl"
+          className="font-bold text-4xl font-nickel"
           variants={textAnimations.slideIn.container}
           initial="hidden"
           whileInView="visible"
@@ -31,7 +31,7 @@ export const AboutUs = () => {
           viewport={{ once: true }}
         >
           <motion.p
-            className="leading-7"
+            className="leading-7 font-apotek-regular text-2xl"
             variants={textAnimations.textMask.item}
             style={{ overflow: 'hidden' }}
           >
@@ -40,7 +40,7 @@ export const AboutUs = () => {
         </motion.div>
         <motion.a
           href="/experience"
-          className="hover:underline flex items-center gap-2"
+          className="hover:underline flex items-center gap-2 font-apotek-regular text-xl text-secondary"
           initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.3 }}
@@ -49,21 +49,22 @@ export const AboutUs = () => {
           Découvrir l'expérience
           <ArrowRight className="size-4" />
         </motion.a>
-        <h3 className="font-bold text-4xl">
+        <h3 className="font-bold text-4xl font-nickel">
           Pour les spectateurs et les artistes
         </h3>
-        <p className="leading-7">
+        <p className="leading-7 font-apotek-regular text-2xl">
           Connect Stage n'est pas seulement un site de diffusion en ligne, c'est un espace virtuel où chaque utilisateur peut s'immerger totalement dans l'ambiance d'un concert. Que vous soyez dans l'impossibilité de vous rendre à un concert à cause de problèmes de mobilité, de santé ou de phobie de la foule, ou que vous soyez un artiste en quête de visibilité, cette expérience immersive est faite pour vous.
         </p>
         <motion.a
           href="/about"
-          className="hover:underline flex items-center gap-2 "
+          className="hover:underline flex items-center gap-2 font-apotek-regular text-xl text-secondary"
         >
           En savoir plus
           <ArrowRight className="size-4" />
         </motion.a>
       </article>
       <motion.div
+      className='font-apotek-regular text-2xl'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}

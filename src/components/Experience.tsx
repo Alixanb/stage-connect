@@ -60,7 +60,7 @@ const Experience = () => {
 
   return (
     <section className="bg-black text-white py-20" aria-labelledby="experience-section">
-      <div className="container mx-auto px-4 mb-20">
+      <div className="mb-20 font-nickel">
         <motion.h2
           id="experience-section"
           className="font-bold text-4xl lg:text-6xl uppercase"
@@ -73,7 +73,7 @@ const Experience = () => {
         </motion.h2>
 
         <motion.p
-          className="font-bold text-4xl lg:text-6xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit"
+          className="font-bold text-4xl lg:text-6xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit font-nickel"
           variants={textAnimations.paragraph.container}
           initial="hidden"
           whileInView="visible"
@@ -177,7 +177,7 @@ const Experience = () => {
 
             <div className="flex flex-col lg:flex-row items-start justify-between mt-8 lg:mt-20">
               <motion.h3
-                className="text-3xl font-bold max-w-[320px]"
+                className="text-4xl font-bold max-w-[320px] font-apotek-medium"
                 variants={textAnimations.slideIn.container}
                 initial="hidden"
                 whileInView="visible"
@@ -192,7 +192,7 @@ const Experience = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-lg opacity-80 max-w-[800px]"
+                className="lg:text-3xl text-xl opacity-80 max-w-[800px] font-apotek-regular"
               >
                 <motion.p
                   variants={textAnimations.textMask.item}
