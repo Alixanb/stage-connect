@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 
 export default function AboutUs() {
@@ -31,27 +31,27 @@ export default function AboutUs() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight font-nickel">
                 Immersion totale <br /> dans l'expérience concert
               </h2>
-              <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
+                <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
                 Connect Stage vous offre la possibilité d'assister à un concert sans quitter votre domicile, tout en ayant l'impression d'y être réellement. Notre plateforme vous permet d'explorer librement une salle de concert virtuelle, où vous pouvez vous promener, interagir et vivre le concert comme si vous étiez au cœur de l'événement.
-              </p>
-              <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
+                </p>
+                <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
                 Que vous soyez dans l'impossibilité de vous rendre à un concert à cause de problèmes de mobilité, de santé ou de phobie de la foule, ou que vous soyez simplement éloigné géographiquement, Connect Stage vous permet de vivre pleinement l'expérience concert depuis n'importe où.
-              </p>
-              <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
+                </p>
+                <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
                 Les artistes peuvent ainsi se produire en ligne dans un environnement virtuel réaliste, atteignant un public mondial, tout en augmentant la visibilité de leur merchandising grâce à des liens directs vers leurs boutiques en ligne.
-              </p>
-              <div className="max-w-7xl mx-auto mt-6 text-secondary text-sm md:text-base">
+                </p>
+                <div className="max-w-7xl mx-auto mt-6 text-secondary text-sm md:text-base">
                 <a href="/experience" className="underline mt-2 inline-block text-secondary font-apotek-medium text-lg" aria-label="Découvrir l'expérience Connect Stage">
                   Découvrir l'expérience
                 </a>
-              </div>
+                </div>
             </div>
 
             {/* Colonne droite */}
             <div className="relative">
               <div className="overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src="/pictures/stage.png"
+                  src="pictures/stage.png"
                   alt="Scène virtuelle de concert Connect Stage"
                   className="w-full h-auto object-cover"
                   loading="lazy"
@@ -92,10 +92,11 @@ export default function AboutUs() {
 
           {/* Avatars */}
           <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="/assets/artist.png" alt="Artiste partenaire 1" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-            <img src="/assets/artist.png" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-            <img src="/assets/artist.png" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-            <img src="/assets/artist.png" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <a href="/artist" ><img src="/pictures/caroussel_1.webp" alt="Artiste partenaire 1" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" /></a>
+            <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+    
           </div>
         </section>
       </div>
