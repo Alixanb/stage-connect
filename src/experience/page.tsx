@@ -12,7 +12,17 @@ const keyboardMap: KeyboardControlsEntry<string>[] = [
   { name: 'jump', keys: ['Space'] },
 ]
 
+const isInConstruction = true;
+
 const ExperiencePage: React.FC = () => {
+  if (isInConstruction) {
+    return (
+      <div className="w-full h-screen flex items-center justify-center">
+        <h1 className="text-4xl font-bold">This page is under construction</h1>
+      </div>
+    )
+  }
+
   return (
     <div className="w-full h-screen">
       <KeyboardControls map={keyboardMap}>
