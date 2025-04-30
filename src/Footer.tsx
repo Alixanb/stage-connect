@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
         </a>
           </div>
           <nav aria-label="Navigation du pied de page">
-        <ul className="flex items-center gap-12 text-base text-white mt-20 justify-center">
+        <ul className="flex items-center gap-12 text-base text-white mt-20 justify-center font-nickel">
           <li><a href="/about" aria-label="À propos de l'entreprise">L'entreprise</a></li>
           <li><a href="/about#vision" aria-label="Notre vision">Vision</a></li>
           <li><a href="/about" aria-label="À propos de nous">À propos</a></li>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
               <img src={linkedin} alt="LinkedIn" width={20} height={20} />
             </a> */}
           </div>
-          <p className="text-white/50 text-sm">
+          <p className="text-white/50 text-lg font-apotek-regular">
             © 2025 Connect Stage. Tous droits réservés.
           </p>
         </div>

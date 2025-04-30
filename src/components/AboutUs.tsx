@@ -40,7 +40,7 @@ export const AboutUs = () => {
         </motion.div>
         <motion.a
           href="/experience"
-          className="hover:underline flex items-center gap-2 font-apotek-regular text-xl text-primary-500"
+          className="hover:underline flex items-center gap-2 font-apotek-regular text-xl text-secondary"
           initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.3 }}
@@ -57,7 +57,7 @@ export const AboutUs = () => {
         </p>
         <motion.a
           href="/about"
-          className="hover:underline flex items-center gap-2 font-apotek-regular text-xl text-green-400"
+          className="hover:underline flex items-center gap-2 font-apotek-regular text-xl text-secondary"
         >
           En savoir plus
           <ArrowRight className="size-4" />
