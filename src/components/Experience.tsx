@@ -6,7 +6,6 @@ import {
 import cityImage from '../assets/city.png'
 import humanImage from '../assets/human.png'
 import motelImage from '../assets/motel.png'
-import star from '../assets/star.svg'
 import windowImage from '../assets/window.png'
 
 const Experience = () => {
@@ -115,44 +114,39 @@ const Experience = () => {
   }
 
   return (
-    <section
-      className="bg-black text-white py-20 min-h-[800px] lg:min-h-[1000px]"
-      aria-labelledby="experience-section"
-    >
-      <div className="container mx-auto px-4 mb-20">
-        <motion.h2
-          id="experience-section"
-          className="font-bold text-4xl lg:text-6xl uppercase"
-          variants={textAnimations.reveal.container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          Immersion totale
-        </motion.h2>
+    <section className="relative bg-black text-white py-20 overflow-hidden" aria-labelledby="experience-section">
+      {/* Image big_wave en fond, toute largeur, derrière le texte */}
+      <img
+        src="/pictures/big_wave.png"
+        alt=""
+        className="pointer-events-none select-none absolute left-0 bottom-0 w-full z-0"
+        style={{ maxHeight: 800, objectFit: 'cover', top: 0 }}
+        draggable={false}
+      />
 
-        <motion.p
-          className="font-bold text-4xl lg:text-6xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit font-nickel"
-          variants={textAnimations.paragraph.container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="hidden lg:block">
-            <img
-              src={star}
-              alt="Icône Connect Stage"
-              className="w-[100px] h-[100px]"
-              width="100"
-              height="100"
-            />
-          </div>
-          expérience 3D
-        </motion.p>
-      </div>
-
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-start max-w-[1400px] mx-auto">
+      <div className="container mx-auto px-4 relative z-10 overflow-hidden">
+        <div className="mb-20 font-nickel">
+          <motion.h2
+            id="experience-section"
+            className="font-bold text-4xl lg:text-7xl uppercase pl-40"
+            variants={textAnimations.reveal.container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            Immersion totale
+          </motion.h2>
+          <motion.p
+            className="font-bold text-4xl lg:text-7xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit font-nickel pr-40"
+            variants={textAnimations.paragraph.container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            expérience 3D
+          </motion.p>
+        </div>
+        <div className="relative z-10 flex flex-col items-start max-w-[1400px] mx-auto">
           <div className="w-full">
             <div className="mb-6">
               <div className="flex gap-4">
