@@ -57,10 +57,7 @@ const Contact: React.FC = () => {
             <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium"
-                  >
+                  <label htmlFor="email" className="block mb-2 font-medium text-xl font-apotek-medium">
                     Votre e-mail
                   </label>
                   <input
@@ -76,7 +73,7 @@ const Contact: React.FC = () => {
                 <div>
                   <label
                     htmlFor="type"
-                    className="block mb-2 text-sm font-medium"
+                    className="block mb-2 text-sm font-medium font-apotek-medium"
                   >
                     Type de message
                   </label>
@@ -96,7 +93,7 @@ const Contact: React.FC = () => {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block mb-2 text-sm font-medium"
+                    className="block mb-2 text-sm font-medium font-apotek-medium"
                   >
                     Sujet
                   </label>
@@ -113,7 +110,7 @@ const Contact: React.FC = () => {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="message"
-                    className="block mb-2 text-sm font-medium"
+                    className="block mb-2 text-xl font-medium font-apotek-medium"
                   >
                     Votre message
                   </label>
@@ -129,7 +126,7 @@ const Contact: React.FC = () => {
                 </div>
                 <button
                   type="submit"
-                  className="text-black bg-white text-xl py-4 px-24 rounded-full cursor-pointer hover:bg-gray-100 transition-colors disabled:opacity-70"
+                  className="font-nickel text-black bg-white text-xl py-4 px-24 rounded-full cursor-pointer hover:bg-gray-100 transition-colors disabled:opacity-70"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}

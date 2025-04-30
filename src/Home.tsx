@@ -10,7 +10,7 @@ const Home: React.FC = () => {
 
   return (
     <div
-      className="container flex-grow"
+      className="flex-grow"
       style={{ textAlign: 'center', padding: '20px' }}
     >
       <h1>Bienvenue sur la page d'accueil</h1>
