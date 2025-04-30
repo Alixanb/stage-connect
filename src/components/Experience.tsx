@@ -1,6 +1,5 @@
-import star from '../assets/star.svg'
-import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import {
   textAnimations
 } from '../animations/textAnimations'
