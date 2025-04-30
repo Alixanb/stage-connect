@@ -1,12 +1,8 @@
+import caroussel_1 from '@p/pictures/caroussel_1.webp'
+import caroussel_2 from '@p/pictures/caroussel_2.webp'
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import {
-  textAnimations
-} from '../animations/textAnimations'
-import cityImage from '../assets/city.png'
-import humanImage from '../assets/human.png'
-import motelImage from '../assets/motel.png'
-import windowImage from '../assets/window.png'
+import { textAnimations } from '../animations/textAnimations'
 
 const Experience = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -17,17 +13,17 @@ const Experience = () => {
     {
       images: [
         {
-          image: cityImage,
+          image: caroussel_1,
           alt: "Vue panoramique d'une salle de concert virtuelle Connect Stage",
           width: '50%',
         },
         {
-          image: windowImage,
+          image: caroussel_2,
           alt: 'Interface immersive de Connect Stage',
           width: '25%',
         },
         {
-          image: motelImage,
+          image: caroussel_2,
           alt: 'Environnement 3D de Connect Stage',
           width: '25%',
         },
@@ -39,17 +35,17 @@ const Experience = () => {
     {
       images: [
         {
-          image: cityImage,
+          image: caroussel_1,
           alt: "Vue panoramique d'une salle de concert virtuelle Connect Stage",
           width: '25%',
         },
         {
-          image: windowImage,
+          image: caroussel_2,
           alt: 'Interface immersive de Connect Stage',
           width: '50%',
         },
         {
-          image: motelImage,
+          image: caroussel_2,
           alt: 'Environnement 3D de Connect Stage',
           width: '25%',
         },
@@ -61,17 +57,17 @@ const Experience = () => {
     {
       images: [
         {
-          image: cityImage,
+          image: caroussel_1,
           alt: "Vue panoramique d'une salle de concert virtuelle Connect Stage",
           width: '25%',
         },
         {
-          image: windowImage,
+          image: caroussel_2,
           alt: 'Interface immersive de Connect Stage',
           width: '25%',
         },
         {
-          image: motelImage,
+          image: caroussel_2,
           alt: 'Environnement 3D de Connect Stage',
           width: '50%',
         },
@@ -86,7 +82,7 @@ const Experience = () => {
     if (isPlaying) {
       intervalRef.current = window.setInterval(() => {
         nextSlide()
-      }, 5000)
+      }, 20000)
     }
     return () => {
       if (intervalRef.current) {
@@ -114,41 +110,37 @@ const Experience = () => {
   }
 
   return (
-    <section className="relative bg-black text-white py-20 overflow-hidden" aria-labelledby="experience-section">
-      {/* Image big_wave en fond, toute largeur, derrière le texte */}
-      <img
-        src="/pictures/big_wave.png"
-        alt=""
-        className="pointer-events-none select-none absolute left-0 bottom-0 w-full z-0"
-        style={{ maxHeight: 800, objectFit: 'cover', top: 0 }}
-        draggable={false}
-      />
+    <section
+      className="bg-black text-white py-20 min-h-[800px] lg:min-h-[1000px]"
+      aria-labelledby="experience-section"
+    >
+      <div className="container mx-auto px-4 mb-20">
+        <motion.h2
+          id="experience-section"
+          className="font-bold text-4xl lg:text-8xl uppercase lg:text-right flex items-center gap-4 justify-start h-fit font-nickel"
+          variants={textAnimations.reveal.container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Immersion totale
+        </motion.h2>
 
-      <div className="container mx-auto px-4 relative z-10 overflow-hidden">
-        <div className="mb-20 font-nickel">
-          <motion.h2
-            id="experience-section"
-            className="font-bold text-4xl lg:text-7xl uppercase pl-40"
-            variants={textAnimations.reveal.container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            Immersion totale
-          </motion.h2>
-          <motion.p
-            className="font-bold text-4xl lg:text-7xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit font-nickel pr-40"
-            variants={textAnimations.paragraph.container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            expérience 3D
-          </motion.p>
-        </div>
-        <div className="relative z-10 flex flex-col items-start max-w-[1400px] mx-auto">
-          <div className="w-full">
-            <div className="mb-6">
+        <motion.p
+          className="font-bold text-4xl lg:text-8xl uppercase lg:text-right flex items-center gap-4 justify-end h-fit font-nickel"
+          variants={textAnimations.paragraph.container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          expérience 3D
+        </motion.p>
+      </div>
+
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-start max-w-[1400px] mx-auto">
+          <div className="w-full ">
+            <div className="mb-4 border-1 border-white p-6">
               <div className="flex gap-4">
                 {slides[currentSlide].images.map((slide, index) => (
                   <div
@@ -166,7 +158,7 @@ const Experience = () => {
                 ))}
               </div>
             </div>
-            <div className="flex justify-end gap-4 mb-16 cursor-pointer">
+            <div className="flex justify-center gap-4 mb-16 cursor-pointer">
               <button onClick={prevSlide} className="group">
                 <svg
                   width="24"
@@ -201,7 +193,7 @@ const Experience = () => {
                   />
                 </svg>
               </button>
-              <button onClick={toggleAutoplay} className="group ml-4">
+              {/* <button onClick={toggleAutoplay} className="group ml-4">
                 {isPlaying ? (
                   <svg
                     width="24"
@@ -224,12 +216,12 @@ const Experience = () => {
                     <path d="M6 4L20 12L6 20V4Z" fill="white" />
                   </svg>
                 )}
-              </button>
+              </button> */}
             </div>
 
-            <div className="flex flex-col lg:flex-row items-start justify-between mt-8 lg:mt-20 h-full">
+            <div className="flex flex-col lg:flex-row items-center justify-between mt-8 lg:mt-20 h-full font-apotek-regular min-h-[200px]">
               <motion.h3
-                className="text-3xl font-bold max-w-[320px] mb-8 lg:mb-0"
+                className="text-2xl lg:text-6xl font-bold max-w-[320px]"
                 variants={textAnimations.slideIn.container}
                 initial="hidden"
                 whileInView="visible"
@@ -242,7 +234,7 @@ const Experience = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-lg opacity-80 max-w-[800px] h-[200px] lg:h-[180px]"
+                className="text-xl lg:text-4xl opacity-80 max-w-[800px] h-fit"
               >
                 <motion.p
                   variants={textAnimations.textMask.item}
