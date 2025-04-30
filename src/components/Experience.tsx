@@ -15,16 +15,72 @@ const Experience = () => {
   const intervalRef = useRef<number | null>(null)
 
   const slides = [
-    [
-      { image: cityImage, alt: 'Vue panoramique d\'une salle de concert virtuelle Connect Stage', width: 600, height: 400 },
-      { image: windowImage, alt: 'Interface immersive de Connect Stage', width: 300, height: 200 },
-      { image: motelImage, alt: 'Environnement 3D de Connect Stage', width: 300, height: 200 },
-    ],
-    [
-      { image: windowImage, alt: 'Interface immersive de Connect Stage', width: 300, height: 200 },
-      { image: cityImage, alt: 'Vue panoramique d\'une salle de concert virtuelle Connect Stage', width: 600, height: 400 },
-      { image: humanImage, alt: 'Avatar participant à un concert virtuel', width: 300, height: 200 },
-    ],
+    {
+      images: [
+        {
+          image: cityImage,
+          alt: "Vue panoramique d'une salle de concert virtuelle Connect Stage",
+          width: '50%',
+        },
+        {
+          image: windowImage,
+          alt: 'Interface immersive de Connect Stage',
+          width: '25%',
+        },
+        {
+          image: motelImage,
+          alt: 'Environnement 3D de Connect Stage',
+          width: '25%',
+        },
+      ],
+      title: 'Explorez et interagissez comme si vous y étiez',
+      description:
+        "Connect Stage n'est pas seulement un site de diffusion en ligne, c'est un espace virtuel où chaque utilisateur peut s'immerger totalement dans l'ambiance d'un concert. Notre technologie 3D vous permet d'explorer librement une salle de concert virtuelle, de vous déplacer à votre guise, d'interagir avec d'autres participants et de vivre le concert comme si vous étiez au cœur de l'événement.",
+    },
+    {
+      images: [
+        {
+          image: cityImage,
+          alt: "Vue panoramique d'une salle de concert virtuelle Connect Stage",
+          width: '25%',
+        },
+        {
+          image: windowImage,
+          alt: 'Interface immersive de Connect Stage',
+          width: '50%',
+        },
+        {
+          image: motelImage,
+          alt: 'Environnement 3D de Connect Stage',
+          width: '25%',
+        },
+      ],
+      title: 'Une expérience immersive unique',
+      description:
+        "Découvrez une nouvelle façon de vivre les concerts en ligne. Notre plateforme vous offre une expérience immersive inégalée, où chaque détail compte. Interagissez avec l'environnement, découvrez des points de vue uniques et partagez ces moments avec d'autres passionnés de musique.",
+    },
+    {
+      images: [
+        {
+          image: cityImage,
+          alt: "Vue panoramique d'une salle de concert virtuelle Connect Stage",
+          width: '25%',
+        },
+        {
+          image: windowImage,
+          alt: 'Interface immersive de Connect Stage',
+          width: '25%',
+        },
+        {
+          image: motelImage,
+          alt: 'Environnement 3D de Connect Stage',
+          width: '50%',
+        },
+      ],
+      title: 'Une technologie révolutionnaire',
+      description:
+        "Notre technologie de pointe vous permet de vivre une expérience de concert unique. Grâce à notre moteur 3D avancé, vous pouvez explorer la scène sous tous les angles, interagir avec l'environnement et créer des souvenirs inoubliables, le tout depuis le confort de votre domicile.",
+    },
   ]
 
   useEffect(() => {
@@ -59,8 +115,11 @@ const Experience = () => {
   }
 
   return (
-    <section className="bg-black text-white py-20" aria-labelledby="experience-section">
-      <div className="mb-20 font-nickel">
+    <section
+      className="bg-black text-white py-20 min-h-[800px] lg:min-h-[1000px]"
+      aria-labelledby="experience-section"
+    >
+      <div className="container mx-auto px-4 mb-20">
         <motion.h2
           id="experience-section"
           className="font-bold text-4xl lg:text-6xl uppercase"
@@ -80,7 +139,13 @@ const Experience = () => {
           viewport={{ once: true }}
         >
           <div className="hidden lg:block">
-            <img src={star} alt="Icône Connect Stage" className="w-[100px] h-[100px]" width="100" height="100" />
+            <img
+              src={star}
+              alt="Icône Connect Stage"
+              className="w-[100px] h-[100px]"
+              width="100"
+              height="100"
+            />
           </div>
           expérience 3D
         </motion.p>
@@ -90,29 +155,25 @@ const Experience = () => {
         <div className="flex flex-col items-start max-w-[1400px] mx-auto">
           <div className="w-full">
             <div className="mb-6">
-              <div className="grid grid-cols-8 gap-4">
-                {slides[currentSlide].map((slide, index) => (
+              <div className="flex gap-4">
+                {slides[currentSlide].images.map((slide, index) => (
                   <div
                     key={index}
-                    className={`max-h-[540px] overflow-hidden ${index === 0 ? 'col-span-4' : 'col-span-2'}`}
+                    className="h-[300px] lg:h-[540px] w-auto overflow-hidden transition-[width] duration-500 ease-in-out"
+                    style={{ width: slide.width }}
                   >
                     <img
                       src={slide.image}
                       alt={slide.alt}
                       className="w-full h-full object-cover"
                       loading="lazy"
-                      width={slide.width}
-                      height={slide.height}
                     />
                   </div>
                 ))}
               </div>
             </div>
-            <div className="flex justify-end gap-4 mb-16">
-              <button
-                onClick={() => handleNavigation(prevSlide)}
-                className="group"
-              >
+            <div className="flex justify-end gap-4 mb-16 cursor-pointer">
+              <button onClick={prevSlide} className="group">
                 <svg
                   width="24"
                   height="24"
@@ -129,10 +190,7 @@ const Experience = () => {
                   />
                 </svg>
               </button>
-              <button
-                onClick={() => handleNavigation(nextSlide)}
-                className="group"
-              >
+              <button onClick={nextSlide} className="group">
                 <svg
                   width="24"
                   height="24"
@@ -175,30 +233,28 @@ const Experience = () => {
               </button>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-start justify-between mt-8 lg:mt-20">
+            <div className="flex flex-col lg:flex-row items-start justify-between mt-8 lg:mt-20 h-full">
               <motion.h3
-                className="text-4xl font-bold max-w-[320px] font-apotek-medium"
+                className="text-3xl font-bold max-w-[320px] mb-8 lg:mb-0"
                 variants={textAnimations.slideIn.container}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                Explorez et interagissez
-                <br />
-                comme si vous y étiez
+                {slides[currentSlide].title}
               </motion.h3>
               <motion.div
                 variants={textAnimations.textMask.container}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="lg:text-3xl text-xl opacity-80 max-w-[800px] font-apotek-regular"
+                className="text-lg opacity-80 max-w-[800px] h-[200px] lg:h-[180px]"
               >
                 <motion.p
                   variants={textAnimations.textMask.item}
                   style={{ overflow: 'hidden' }}
                 >
-                  Connect Stage n'est pas seulement un site de diffusion en ligne, c'est un espace virtuel où chaque utilisateur peut s'immerger totalement dans l'ambiance d'un concert. Notre technologie 3D vous permet d'explorer librement une salle de concert virtuelle, de vous déplacer à votre guise, d'interagir avec d'autres participants et de vivre le concert comme si vous étiez au cœur de l'événement. Les artistes peuvent ainsi toucher un public mondial tout en offrant une expérience authentique et immersive.
+                  {slides[currentSlide].description}
                 </motion.p>
               </motion.div>
             </div>
