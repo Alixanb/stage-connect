@@ -71,12 +71,12 @@ export const Header = () => {
               NOTRE SCÈNE
             </motion.span>
 
-            <motion.p
+            <motion.h1
               className="text-base lg:text-end max-w-[500px] shrink normal-case font-normal hidden lg:block font-apotek-medium text-xl"
               variants={textAnimations.paragraph.item}
             >
               Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, interagir et vivre le concert comme si vous y étiez réellement.
-            </motion.p>
+            </motion.h1>
           </motion.div>
           <motion.div
             className="lg:text-center font-nickel"
@@ -88,12 +88,12 @@ export const Header = () => {
             VIRTUELLE
           </motion.div>
 
-          <motion.p
+          <motion.h1
             className="text-base lg:text-end max-w-[500px] shrink normal-case font-normal block lg:hidden"
             variants={textAnimations.paragraph.item}
           >
             Plongez dans l'expérience immersive d'un concert virtuel, où vous pouvez vous promener, interagir et vivre le concert comme si vous y étiez réellement.
-          </motion.p>
+          </motion.h1>
         </div>
       </div>
 

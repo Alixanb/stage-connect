@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import BurgerMenuIcon from "../assets/burger-menu.svg";
-import CrossIcon from "../assets/cross.svg";
-import background from '../assets/bg_footer.png'
+import background from '@p/pictures/bg_footer.png'
+import BurgerMenuIcon from '@p/pictures/burger-menu.svg'
+import CrossIcon from '@p/pictures/cross.svg'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const BurgerMenu: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div className="relative">
@@ -27,14 +27,13 @@ const BurgerMenu: React.FC = () => {
 
       {/* Zone de navigation */}
       <div
-        className={`fixed top-0 right-0 w-64 h-auto bg-black text-white transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out shadow-lg z-10`}
+        className={`fixed top-0 right-0 w-64 h-auto bg-black text-white transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          } transition-transform duration-300 ease-in-out shadow-lg z-10`}
       >
         <img
-        src={background}
-        alt="background"
-        className="absolute top-0 left-0 w-full h-full object-cover bg-center opacity-75 z-0 bg-black"
+          src={background}
+          alt="background"
+          className="absolute top-0 left-0 w-full h-full object-cover bg-center opacity-75 z-0 bg-black"
         />
         <button
           onClick={toggleMenu}
@@ -42,8 +41,7 @@ const BurgerMenu: React.FC = () => {
         >
           <img src={CrossIcon} alt="Close Menu" className="w-6 h-6" />
         </button>
-        <nav className="relative z-10 flex flex-col items-start p-4 space-y-4 text-xl text-white">
-
+        <nav className="relative z-10 flex flex-col items-center p-4 space-y-4 text-xl text-white">
           <Link
             to="/"
             onClick={toggleMenu}
@@ -75,7 +73,7 @@ const BurgerMenu: React.FC = () => {
         </nav>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BurgerMenu;
+export default BurgerMenu

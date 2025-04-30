@@ -1,46 +1,54 @@
-import React, { useState } from "react";
-import Mail from "../assets/mail.svg";
-import Layout from "../components/Layout";
+import Mail from '@p/pictures/mail.svg'
+import React, { useState } from 'react'
+import Layout from '../components/Layout'
 
 const Contact: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [messageType, setMessageType] = useState("support");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
+  const [email, setEmail] = useState('')
+  const [messageType, setMessageType] = useState('support')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const [success, setSuccess] = useState(false)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSuccess(false);
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSuccess(false)
 
     // Crée un lien mailto avec les données du formulaire
-    const mailtoLink = `mailto:connect.stage67@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    const mailtoLink = `mailto:connect.stage67@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
       `Message de: ${email}\nType: ${messageType}\n\n${message}`
-    )}`;
+    )}`
 
     // Ouvre le client mail de l'utilisateur avec le lien mailto
-    window.location.href = mailtoLink;
+    window.location.href = mailtoLink
 
     // Si l'envoi a "fonctionné" (nous pouvons pas vraiment vérifier si l'email a été envoyé via mailto)
-    setSuccess(true);
-    setEmail("");
-    setMessageType("support");
-    setSubject("");
-    setMessage("");
-    setErrorMessage(null);
+    setSuccess(true)
+    setEmail('')
+    setMessageType('support')
+    setSubject('')
+    setMessage('')
+    setErrorMessage(null)
 
-    setIsSubmitting(false);
-  };
+    setIsSubmitting(false)
+  }
 
   return (
     <Layout>
       <div className="min-h-screen bg-black p-16 grid grid-cols-2 gap-10">
         <div className="flex flex-col justify-center items-start">
-          <div className="font-nickel flex items-center text-[80px] uppercase font-medium text-left p-5 border-b border-gray-500 pb-2">
-            <img src={Mail} alt="mail" className="mr-4" width="120" height="120" />
+          <div className="flex items-center text-[80px] uppercase font-medium text-left p-5 border-b border-gray-500 pb-2">
+            <img
+              src={Mail}
+              alt="mail"
+              className="mr-4"
+              width="120"
+              height="120"
+            />
             <span>Contactez-nous</span>
           </div>
         </div>
@@ -49,7 +57,7 @@ const Contact: React.FC = () => {
             <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
-                  <label htmlFor="email" className="block mb-2 font-mediu text-xl font-apotek-medium">
+                  <label htmlFor="email" className="block mb-2 font-medium text-xl font-apotek-medium">
                     Votre e-mail
                   </label>
                   <input
@@ -63,7 +71,10 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="type" className="block mb-2 text-xl font-apotek-medium font-medium">
+                  <label
+                    htmlFor="type"
+                    className="block mb-2 text-sm font-medium font-apotek-medium"
+                  >
                     Type de message
                   </label>
                   <select
@@ -74,11 +85,16 @@ const Contact: React.FC = () => {
                     required
                   >
                     <option value="support">Support technique</option>
-                    <option value="experience">Proposer une nouvelle expérience</option>
+                    <option value="experience">
+                      Proposer une nouvelle expérience
+                    </option>
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block mb-2 text-xl font-apotek-medium font-medium">
+                  <label
+                    htmlFor="subject"
+                    className="block mb-2 text-sm font-medium font-apotek-medium"
+                  >
                     Sujet
                   </label>
                   <input
@@ -92,7 +108,10 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="message" className="block mb-2 text-xl font-apotek-medium font-medium">
+                  <label
+                    htmlFor="message"
+                    className="block mb-2 text-xl font-medium font-apotek-medium"
+                  >
                     Votre message
                   </label>
                   <textarea
@@ -110,7 +129,7 @@ const Contact: React.FC = () => {
                   className="font-nickel text-black bg-white text-xl py-4 px-24 rounded-full cursor-pointer hover:bg-gray-100 transition-colors disabled:opacity-70"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Envoi en cours..." : "Envoyer"}
+                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
                 </button>
                 {errorMessage && (
                   <div className="text-red-500 font-bold">
@@ -128,7 +147,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
