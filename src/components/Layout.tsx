@@ -3,7 +3,6 @@ import React, { ReactNode, useEffect, useRef } from 'react';
 import Footer from '../Footer';
 import BurgerMenu from "./BurgerMenu";
 import { isMobile } from 'react-device-detect';
-import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { textAnimations } from '../animations/textAnimations';
 
@@ -38,9 +37,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="site-wrapper flex flex-col min-h-screen">
       <header className="sticky top-0 z-20 bg-black/80 backdrop-blur flex justify-between">
       <div className="relative z-10 flex flex-row p-4 justify-start text-xl text-white ml-8">
-      <Link to="/">
+      <a href="/" target="_blank" rel="noopener noreferrer">
          <motion.img
-           src="src/assets/logo_footer.svg"
+           src="/public/assets/pictures/Logo-Connect_Stage-Version_Instagram.png"
            alt="Logo Connect Stage"
            variants={textAnimations.reveal.container}
            initial="hidden"
@@ -48,7 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
            viewport={{ once: true }}
            className="w-16 h-auto"
          />
-      </Link>
+      </a>
      </div>
         {
           isMobile ? (
@@ -58,30 +57,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           ) :
           (
             <nav className="relative z-10 flex flex-row p-4 justify-end space-x-6 text-xl text-white mr-8">
-              <Link
-                to="/"
+              <a href='/'
                 className="link-underline-animate font-nickel"
               >
                 Accueil
-              </Link>
-              <Link
-                to="/experience"
+              </a>
+              <a href='/experience'
                 className="link-underline-animate font-nickel"
               >
                 Expérience
-              </Link>
-              <Link
-                to="/about"
+              </a>
+              <a href='/about'
                 className="link-underline-animate font-nickel"
               >
                 À propos
-              </Link>
-              <Link
-                to="/contact"
+              </a>
+              <a href='/contact'
                 className="link-underline-animate font-nickel"
               >
                 Contact
-              </Link>
+              </a>
             </nav>
           )
         }

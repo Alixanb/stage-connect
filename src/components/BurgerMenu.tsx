@@ -42,7 +42,7 @@ const BurgerMenu: React.FC = () => {
         >
           <img src={CrossIcon} alt="Close Menu" className="w-6 h-6" />
         </button>
-        <nav className="relative z-10 flex flex-col items-start p-4 space-y-4 text-xl text-white">
+        <nav className="relative z-10 flex flex-col items-center p-4 space-y-4 text-xl text-white">
           <Link
             to="/"
             onClick={toggleMenu}
