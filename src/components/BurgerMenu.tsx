@@ -1,8 +1,8 @@
+import background from '@p/pictures/bg_footer.png'
+import BurgerMenuIcon from '@p/pictures/burger-menu.svg'
+import CrossIcon from '@p/pictures/cross.svg'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import BurgerMenuIcon from '../../public/assets/pictures/burger-menu.svg'
-import CrossIcon from '../../public/assets/pictures/cross.svg'
-import background from '../../public/assets/pictures/bg_footer.png'
 
 const BurgerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,9 +27,8 @@ const BurgerMenu: React.FC = () => {
 
       {/* Zone de navigation */}
       <div
-        className={`fixed top-0 right-0 w-64 h-auto bg-black text-white transform ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } transition-transform duration-300 ease-in-out shadow-lg z-10`}
+        className={`fixed top-0 right-0 w-64 h-auto bg-black text-white transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          } transition-transform duration-300 ease-in-out shadow-lg z-10`}
       >
         <img
           src={background}

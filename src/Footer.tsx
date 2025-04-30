@@ -1,9 +1,7 @@
-import background from '../public/assets/pictures/bg_footer.png'
-import facebook from '../public/assets/pictures/facebook.svg'
-import insta from '../public/assets/pictures/insta.svg'
-import linkedin from '../public/assets/pictures/linkedin.svg'
-import logo from '../public/assets/pictures/logo_footer.svg'
-import x from '../public/assets/pictures/x.svg'
+import background from '@p/pictures/bg_footer.png'
+import facebook from '@p/pictures/facebook.svg'
+import insta from '@p/pictures/insta.svg'
+import logo from '@p/pictures/logo_footer.svg'
 
 const Footer: React.FC = () => {
   return (

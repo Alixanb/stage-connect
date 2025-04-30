@@ -4,7 +4,7 @@ import { textAnimations } from '../animations/textAnimations'
 
 const ThePerformer: React.FC = () => {
   return (
-    <section aria-labelledby="artistes-section" className="performer-section">
+    <section aria-labelledby="artistes-section" className="container">
       <div className="performer-header">
         <motion.h2
           id="artistes-section"
@@ -28,7 +28,7 @@ const ThePerformer: React.FC = () => {
       </div>
       <div className="mt-8 grid md:grid-cols-2 gap-8 items-center">
         <motion.img
-          src="../../public/assets/pictures/caroussel_1.webp"
+          src="/pictures/caroussel_1.webp"
           alt="Artistes performant sur une scène virtuelle Connect Stage"
           className="rounded-lg shadow-lg w-full h-auto"
           loading="lazy"
@@ -69,7 +69,7 @@ const ThePerformer: React.FC = () => {
             </motion.p>
           </motion.div>
           <motion.a
-            href="https://spotify.com"
+            href="/contact"
             className="mt-4 inline-block text-secondary hover:underline font-apotek-regular text-xl"
             target="_blank"
             rel="noopener noreferrer"
@@ -79,7 +79,7 @@ const ThePerformer: React.FC = () => {
             viewport={{ once: true }}
             aria-label="Rejoindre nos artistes sur Connect Stage"
           >
-            Rejoindre nos artistes ↗
+            Nous contacter ↗
           </motion.a>
         </div>
       </div>
