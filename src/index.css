@@ -38,3 +38,10 @@
   font-family: 'ApotekCompRegular', sans-serif !important;
 }
 
+.text-primary{
+  color : #86182f !important;
+}
+
+.text-secondary{
+  color : #00705d !important;
+}

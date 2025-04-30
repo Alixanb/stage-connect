@@ -65,7 +65,7 @@ const ThePerformer: React.FC = () => {
           </motion.div>
           <motion.a
             href="https://spotify.com"
-            className="mt-4 inline-block text-green-400 hover:underline font-apotek-regular text-xl"
+            className="mt-4 inline-block text-primary-500 hover:underline font-apotek-regular text-xl"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0 }}
