@@ -5,6 +5,7 @@ import { useControls } from "leva";
 import { useEffect, useRef, useState } from "react";
 import { Group, MathUtils, Vector3 } from "three";
 import { degToRad } from "three/src/math/MathUtils.js";
+import { useObjectTransparency } from "../hooks/useObjectTransparency";
 import { Character } from "./Character";
 
 const normalizeAngle = (angle) => {
@@ -29,18 +30,20 @@ const lerpAngle = (start, end, t) => {
 };
 
 export const CharacterController = () => {
-  const { WALK_SPEED, RUN_SPEED, ROTATION_SPEED, JUMP_FORCE } = useControls(
+  const { WALK_SPEED, RUN_SPEED, ROTATION_SPEED, JUMP_FORCE, ENABLE_OCCLUSION_TRANSPARENCY, OBJECT_TRANSPARENCY } = useControls(
     "Character Control",
     {
       WALK_SPEED: { value: 0.8, min: 0.1, max: 4, step: 0.1 },
       RUN_SPEED: { value: 1.6, min: 0.2, max: 12, step: 0.1 },
       ROTATION_SPEED: {
-        value: degToRad(2),
+        value: degToRad(3),
         min: degToRad(0.1),
         max: degToRad(5),
         step: degToRad(0.1),
       },
       JUMP_FORCE: { value: 5, min: 1, max: 10, step: 0.1 },
+      ENABLE_OCCLUSION_TRANSPARENCY: { value: true },
+      OBJECT_TRANSPARENCY: { value: 0.3, min: 0, max: 1, step: 0.1 }
     }
   );
   const rb = useRef<RapierRigidBody>(null);
@@ -60,6 +63,12 @@ export const CharacterController = () => {
   const cameraLookAt = useRef(new Vector3());
   const [, get] = useKeyboardControls();
   const isClicking = useRef(false);
+
+  // Setup object transparency system
+  const updateTransparency = useObjectTransparency(character, {
+    enabled: ENABLE_OCCLUSION_TRANSPARENCY,
+    opacity: OBJECT_TRANSPARENCY
+  });
 
   useEffect(() => {
     const onMouseDown = () => {
@@ -93,7 +102,6 @@ export const CharacterController = () => {
       if (jumpCooldown.current > 0) {
         jumpCooldown.current -= delta;
       }
-
 
       const raycastOrigin = rb.current.translation();
       raycastOrigin.y -= 0.25;
@@ -185,6 +193,9 @@ export const CharacterController = () => {
 
       camera.lookAt(cameraLookAt.current);
     }
+
+    // Update transparency system each frame
+    updateTransparency();
   });
 
   return (
