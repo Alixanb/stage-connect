@@ -35,19 +35,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [])
 
   return (
-    <div className="site-wrapper">
-      <header className="flex justify-between">
-      <div className="relative z-10 flex flex-row p-4 justify-start text-xl text-white ml-8">
-        <motion.img
-          src="src/assets/logo_footer.svg"
-          alt="Logo Connect Stage"
-          variants={textAnimations.reveal.container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="w-32 h-auto"
-        />
-    </div>
+    <div className="site-wrapper flex flex-col min-h-screen">
+      <header className="sticky top-0 z-20 bg-black/80 backdrop-blur flex justify-between">
+        <div className="relative z-10 flex flex-row p-4 justify-start text-xl text-white ml-8 font-apotek-medium">
+          <motion.h1
+            variants={textAnimations.reveal.container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            Connect Stage - Expérience immersive de concerts virtuels en 3D
+          </motion.h1>
+        </div>
         {
           isMobile ? (
             <div className="p-4">
@@ -58,25 +57,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <nav className="relative z-10 flex flex-row p-4 justify-end space-x-6 text-xl text-white mr-8">
               <Link
                 to="/"
-                className="hover:underline hover:text-white"
+                className="link-underline-animate font-nickel"
               >
                 Accueil
               </Link>
               <Link
                 to="/experience"
-                className="hover:underline hover:text-white"
+                className="link-underline-animate font-nickel"
               >
                 Expérience
               </Link>
               <Link
                 to="/about"
-                className="hover:underline hover:text-white"
+                className="link-underline-animate font-nickel"
               >
                 À propos
               </Link>
               <Link
                 to="/contact"
-                className="hover:underline hover:text-white"
+                className="link-underline-animate font-nickel"
               >
                 Contact
               </Link>
@@ -84,7 +83,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           )
         }
       </header>
-      <main id="main-content" className="p-4">
+      <main id="main-content" className="p-4 flex-1">
         {children}
       </main>
       <Footer />
