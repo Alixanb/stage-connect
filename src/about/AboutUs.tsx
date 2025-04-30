@@ -51,7 +51,7 @@ export default function AboutUs() {
             <div className="relative">
               <div className="overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src="/assets/stage.png"
+                  src="/pictures/stage.png"
                   alt="Scène virtuelle de concert Connect Stage"
                   className="w-full h-auto object-cover"
                   loading="lazy"
