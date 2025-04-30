@@ -1,8 +1,8 @@
-import background from '@p/pictures/bg_footer.png'
-import BurgerMenuIcon from '@p/pictures/burger-menu.svg'
-import CrossIcon from '@p/pictures/cross.svg'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import background from '/pictures/bg_footer.png'
+import BurgerMenuIcon from '/pictures/burger-menu.svg'
+import CrossIcon from '/pictures/cross.svg'
 
 const BurgerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)

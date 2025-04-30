@@ -1,8 +1,8 @@
-import caroussel_1 from '@p/pictures/caroussel_1.webp'
-import caroussel_2 from '@p/pictures/caroussel_2.webp'
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { textAnimations } from '../animations/textAnimations'
+import caroussel_1 from '/pictures/caroussel_1.webp'
+import caroussel_2 from '/pictures/caroussel_2.webp'
 
 const Experience = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
