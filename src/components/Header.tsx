@@ -80,7 +80,7 @@ export const Header = () => {
             className="lg:shrink-0 lg:whitespace-nowrap"
             variants={textAnimations.paragraph.item}
           >
-            NOTRE SCÈNE,
+            NOTRE SCÈNE
           </motion.span>
 
         </motion.div>
@@ -91,7 +91,7 @@ export const Header = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          3D experience™
+          VIRTUELLE
         </motion.div>
         <motion.p
           className="text-base lg:text-end max-w-[500px] shrink normal-case font-normal block lg:hidden"
