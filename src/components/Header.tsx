@@ -12,7 +12,7 @@ export const Header = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Connect Stage est une plateforme
+          Connect Stage - Expérience immersive de concerts virtuels en 3D.
         </motion.h1>
       </div>
       <div className="flex flex-col text-6xl lg:text-[140px] uppercase font-medium">
