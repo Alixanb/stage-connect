@@ -39,17 +39,17 @@ const Footer: React.FC = () => {
           <nav aria-label="Navigation du pied de page">
             <ul className="flex items-center justify-center gap-12 text-base text-white mt-20 font-nickel">
               <li>
-                <a href="/experience" aria-label="Expérience">
+                <a href="/experience" aria-label="Expérience" className='hover:underline '>
                   Expérience
                 </a>
               </li>
               <li>
-                <a href="/about" aria-label="À propos de nous">
+                <a href="/about" aria-label="À propos de nous" className='hover:underline '>
                   À propos
                 </a>
               </li>
               <li>
-                <a href="/contact" aria-label="Contact">
+                <a href="/contact" aria-label="Contact" className='hover:underline '>
                   Contact
                 </a>
               </li>
