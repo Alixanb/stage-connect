@@ -181,7 +181,7 @@ export const CharacterController = () => {
 
     if (cameraTarget.current) {
       cameraTarget.current.getWorldPosition(cameraLookAtWorldPosition.current);
-      cameraLookAt.current.lerp(cameraLookAtWorldPosition.current, 0.1);
+      cameraLookAt.current.lerp(cameraLookAtWorldPosition.current, 0.5);
 
       camera.lookAt(cameraLookAt.current);
     }
@@ -190,8 +190,8 @@ export const CharacterController = () => {
   return (
     <RigidBody colliders={false} lockRotations ref={rb}>
       <group ref={container}>
-        <group ref={cameraTarget} position-z={1.5} />
-        <group ref={cameraPosition} position-y={4} position-z={-4} />
+        <group ref={cameraTarget} position-z={0} />
+        <group ref={cameraPosition} position-y={1} position-z={-4} />
         <group ref={character}>
           <Character scale={0.18} position-y={-0.25} animation={animation} />
         </group>
