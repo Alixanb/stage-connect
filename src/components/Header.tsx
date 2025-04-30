@@ -127,7 +127,7 @@ export const Header = () => {
             </motion.div>
           </div>
           <motion.img
-            src="public/pictures/overview.webp"
+            src="/pictures/overview.webp"
             alt="Expérience de concert virtuel immersif Connect Stage"
             className="w-full aspect-square lg:aspect-auto lg:h-[500px] lg:w-[1200px] object-cover"
             loading="eager"
