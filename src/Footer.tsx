@@ -1,14 +1,14 @@
-import background from './assets/bg_footer.png'
-import facebook from './assets/facebook.svg'
-import insta from './assets/insta.svg'
-import linkedin from './assets/linkedin.svg'
-import logo from './assets/logo_footer.svg'
-import x from './assets/x.svg'
+import background from '../public/assets/pictures/bg_footer.png'
+import facebook from '../public/assets/pictures/facebook.svg'
+import insta from '../public/assets/pictures/insta.svg'
+import linkedin from '../public/assets/pictures/linkedin.svg'
+import logo from '../public/assets/pictures/logo_footer.svg'
+import x from '../public/assets/pictures/x.svg'
 
 const Footer: React.FC = () => {
   return (
     <footer
-      className="bg-black max-h-[800px] relative overflow-hidden hidden lg:block"
+      className="bg-black max-h-[800px] relative overflow-hidden hidden lg:block mt-40"
       aria-label="Pied de page"
     >
       <img

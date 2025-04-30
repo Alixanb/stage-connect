@@ -28,7 +28,7 @@ const ThePerformer: React.FC = () => {
       </div>
       <div className="mt-8 grid md:grid-cols-2 gap-8 items-center">
         <motion.img
-          src="src/assets/city-skyline.png"
+          src="../../public/assets/pictures/caroussel_1.webp"
           alt="Artistes performant sur une scène virtuelle Connect Stage"
           className="rounded-lg shadow-lg w-full h-auto"
           loading="lazy"
@@ -60,7 +60,12 @@ const ThePerformer: React.FC = () => {
               variants={textAnimations.textMask.item}
               style={{ overflow: 'hidden' }}
             >
-              Les artistes peuvent se produire en ligne dans un environnement virtuel réaliste, atteignant un public mondial, tout en augmentant la visibilité de leur merchandising grâce à des liens directs vers leurs boutiques en ligne. Avec Connect Stage, développez votre audience et créez des expériences uniques pour vos fans, où qu'ils soient et quand ils le souhaitent.
+              Les artistes peuvent se produire en ligne dans un environnement
+              virtuel réaliste, atteignant un public mondial, tout en augmentant
+              la visibilité de leur merchandising grâce à des liens directs vers
+              leurs boutiques en ligne. Avec Connect Stage, développez votre
+              audience et créez des expériences uniques pour vos fans, où qu'ils
+              soient et quand ils le souhaitent.
             </motion.p>
           </motion.div>
           <motion.a
