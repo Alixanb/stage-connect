@@ -8,7 +8,7 @@ const ThePerformer: React.FC = () => {
       <div className="performer-header">
         <motion.h2
           id="artistes-section"
-          className="text-4xl lg:text-6xl font-bold"
+          className="text-4xl lg:text-6xl font-bold font-nickel"
           variants={textAnimations.reveal.container}
           initial="hidden"
           whileInView="visible"
@@ -17,7 +17,7 @@ const ThePerformer: React.FC = () => {
           LES ARTISTES
         </motion.h2>
         <motion.p
-          className="mt-2 border-t border-gray-500 pt-2"
+          className="mt-2 border-t border-gray-500 pt-2 font-apotek-medium text-xl"
           variants={textAnimations.fadeIn.container}
           initial="hidden"
           whileInView="visible"
@@ -41,7 +41,7 @@ const ThePerformer: React.FC = () => {
         />
         <div>
           <motion.h3
-            className="text-2xl font-bold"
+            className="text-4xl font-bold font-apotek-medium"
             variants={textAnimations.slideIn.container}
             initial="hidden"
             whileInView="visible"
@@ -56,7 +56,7 @@ const ThePerformer: React.FC = () => {
             viewport={{ once: true }}
           >
             <motion.p
-              className="mt-4 text-gray-300"
+              className="mt-4 text-gray-300 font-apotek-regular text-xl"
               variants={textAnimations.textMask.item}
               style={{ overflow: 'hidden' }}
             >
@@ -65,7 +65,7 @@ const ThePerformer: React.FC = () => {
           </motion.div>
           <motion.a
             href="https://spotify.com"
-            className="mt-4 inline-block text-blue-400 hover:underline"
+            className="mt-4 inline-block text-green-400 hover:underline font-apotek-regular text-xl"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0 }}

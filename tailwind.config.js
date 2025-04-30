@@ -4,11 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#86182F",
-      },
-      fontFamily: {
-        nickel: ["NickelGothic", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        primary: {
+          100: "#e7d1d5",
+          200: "#cfa3ac",
+          300: "#b67482",
+          400: "#9e4659",
+          500: "#86182f",
+          600: "#6b1326",
+          700: "#500e1c",
+          800: "#360a13",
+          900: "#1b0509",
+        },
       },
       fontSize: {
         xs: "0.75rem", // 12px
