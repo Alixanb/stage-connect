@@ -4,7 +4,7 @@ import { textAnimations } from '../animations/textAnimations'
 
 const ThePerformer: React.FC = () => {
   return (
-    <section aria-labelledby="artistes-section" className="performer-section">
+    <section aria-labelledby="artistes-section" className="container">
       <div className="performer-header">
         <motion.h2
           id="artistes-section"
@@ -69,7 +69,7 @@ const ThePerformer: React.FC = () => {
             </motion.p>
           </motion.div>
           <motion.a
-            href="https://spotify.com"
+            href="/contact"
             className="mt-4 inline-block text-secondary hover:underline font-apotek-regular text-xl"
             target="_blank"
             rel="noopener noreferrer"
@@ -79,7 +79,7 @@ const ThePerformer: React.FC = () => {
             viewport={{ once: true }}
             aria-label="Rejoindre nos artistes sur Connect Stage"
           >
-            Rejoindre nos artistes ↗
+            Nous contacter ↗
           </motion.a>
         </div>
       </div>
