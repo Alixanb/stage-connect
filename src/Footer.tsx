@@ -7,7 +7,10 @@ import x from './assets/x.svg'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black max-h-[800px] relative overflow-hidden hidden lg:block" aria-label="Pied de page">
+    <footer
+      className="bg-black max-h-[800px] relative overflow-hidden hidden lg:block"
+      aria-label="Pied de page"
+    >
       <img
         src={background}
         alt="Arrière-plan du footer Connect Stage"
@@ -43,18 +46,22 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-auto flex justify-between w-full px-20 py-8 border-t border-white/20">
           <div className="flex items-center gap-4">
-            <a href="https://facebook.com/connectstage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <img src={facebook} alt="Facebook" height={20} width={20} />
+            <a
+              href="https://facebook.com/connectstage"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <img src={facebook} alt="Facebook" height={12} width={12} />
             </a>
-            <a href="https://instagram.com/connectstage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a
+              href="https://instagram.com/connectstage"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
               <img src={insta} alt="Instagram" width={20} height={20} />
             </a>
-            {/* <a href="https://twitter.com/connectstage" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <img src={x} alt="Twitter" width={20} height={20} />
-            </a>
-            <a href="https://linkedin.com/company/connectstage" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <img src={linkedin} alt="LinkedIn" width={20} height={20} />
-            </a> */}
           </div>
           <p className="text-white/50 text-lg font-apotek-regular">
             © 2025 Connect Stage. Tous droits réservés.
