@@ -1,10 +1,10 @@
-import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import { textAnimations } from '../animations/textAnimations'
 
 export const AboutUs = () => {
   return (
-    <div className="my-[260px] grid grid-cols-2 gap-4">
+    <div className="my-16 lg:my-[260px] grid grid-cols-1 lg:grid-cols-2 gap-4">
       <motion.h2
         className="font-bold text-xl"
         variants={textAnimations.reveal.container}
@@ -12,7 +12,7 @@ export const AboutUs = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        A little more about us
+        À propos de Connect Stage
       </motion.h2>
       <article className="flex flex-col gap-6">
         <motion.h3
@@ -22,7 +22,7 @@ export const AboutUs = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Space connect® météor sit leo Hans geïz Spätzle™
+          Une expérience immersive unique
         </motion.h3>
         <motion.div
           variants={textAnimations.textMask.container}
@@ -35,14 +35,7 @@ export const AboutUs = () => {
             variants={textAnimations.textMask.item}
             style={{ overflow: 'hidden' }}
           >
-            Lorem Elsass ipsum knack schneck libero. Carola Racing. non tellus
-            Mauris knepfle libero, Salut bisamme id ac senectus flammekueche
-            leverwurscht Heineken Pellentesque elit tchao bissame sed Chulien
-            eleifend so auctor, in, nullam Pfourtz ! risus, salu wie turpis, id,
-            gal hopla dui gewurztraminer et rucksack Gal. mollis nüdle ch'ai
-            suspendisse hopla condimentum eget bredele placerat Yo dû. rhoncus
-            pellentesque Chulia Roberstau hoplageiss ftomi! und commodo wurscht
-            dolor Salu bissame tristique Verdammi amet
+            Connect Stage vous offre la possibilité d'assister à un concert sans quitter votre domicile, tout en ayant l'impression d'y être réellement. Explorez librement une salle de concert virtuelle, où vous pouvez vous promener, interagir et vivre l'événement comme si vous étiez au cœur de l'action. Notre technologie 3D crée une immersion totale dans l'ambiance du concert.
           </motion.p>
         </motion.div>
         <motion.a
@@ -53,13 +46,20 @@ export const AboutUs = () => {
           transition={{ delay: 0.4, duration: 0.3 }}
           viewport={{ once: true }}
         >
-          See the experience
-        <h3 className="font-bold text-4xl">Space connect® météor  sit leo Hans geïz Spätzle™</h3>
+          Découvrir l'expérience
+          <ArrowRight className="size-4" />
+        </motion.a>
+        <h3 className="font-bold text-4xl">
+          Pour les spectateurs et les artistes
+        </h3>
         <p className="leading-7">
-          Lorem Elsass ipsum knack schneck libero. Carola Racing. non tellus Mauris knepfle libero, Salut bisamme id ac senectus flammekueche leverwurscht Heineken Pellentesque elit tchao bissame sed Chulien eleifend so auctor, in, nullam Pfourtz ! risus, salu wie turpis, id, gal hopla dui gewurztraminer et rucksack Gal. mollis nüdle ch'ai suspendisse hopla condimentum eget bredele placerat Yo dû. rhoncus pellentesque Chulia Roberstau hoplageiss ftomi! und commodo wurscht dolor Salu bissame tristique Verdammi amet
+          Connect Stage n'est pas seulement un site de diffusion en ligne, c'est un espace virtuel où chaque utilisateur peut s'immerger totalement dans l'ambiance d'un concert. Que vous soyez dans l'impossibilité de vous rendre à un concert à cause de problèmes de mobilité, de santé ou de phobie de la foule, ou que vous soyez un artiste en quête de visibilité, cette expérience immersive est faite pour vous.
         </p>
-        <a href="/about" className="hover:underline flex items-center gap-2 ">
-          More about us
+        <motion.a
+          href="/about"
+          className="hover:underline flex items-center gap-2 "
+        >
+          En savoir plus
           <ArrowRight className="size-4" />
         </motion.a>
       </article>
@@ -69,7 +69,7 @@ export const AboutUs = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Lorem ipsum dolor sit amet.
+        Connect Stage - L'immersion dans un concert accessible à tous.
       </motion.div>
     </div>
   )
