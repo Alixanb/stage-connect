@@ -44,37 +44,35 @@ const ThePerformer: React.FC = () => {
             viewport={{ once: true }}
           />
 
-<div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-  <div className="flex gap-4">
-    <a
-      href="https://open.spotify.com/artist/4JS2lTQZgzfanDQj7Yfrkq?si=v7uhOc9rRnGLYjQsiRqBSw"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded flex items-center gap-2"
-    >
-      <img
-        src="https://www.logo.wine/a/logo/Spotify/Spotify-Black-Logo.wine.svg"
-        alt="Spotify logo"
-        className="h-12"
-      />
-      Spotify
-    </a>
-    <a
-      href="https://dzr.page.link/Ld67Wa7m7GivY2dE6"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-white px-4 py-2 rounded flex items-center gap-2"
-      style={{ backgroundColor: '#9D36F2' }}
-    >
-      <img
-        src="https://upload.wikimedia.org/wikipedia/fr/c/ca/Logo_Deezer_2023.svg"
-        alt="Deezer logo"
-        className="h-5"
-      />
-      Deezer
-    </a>
-  </div>
-</div>
+          <div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="flex gap-4">
+              <a
+                href="https://open.spotify.com/artist/4JS2lTQZgzfanDQj7Yfrkq?si=v7uhOc9rRnGLYjQsiRqBSw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2"
+              >
+                <img
+                  src="https://www.logo.wine/a/logo/Spotify/Spotify-Black-Logo.wine.svg"
+                  alt="Spotify logo"
+                  className="h-12"
+                />
+              </a>
+              <a
+                href="https://dzr.page.link/Ld67Wa7m7GivY2dE6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white px-4 py-2 rounded-full flex items-center gap-2"
+                style={{ backgroundColor: '#FFF' }}
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/fr/c/ca/Logo_Deezer_2023.svg"
+                  alt="Deezer logo"
+                  className="h-5"
+                />
+              </a>
+            </div>
+          </div>
 
 
         </div>
