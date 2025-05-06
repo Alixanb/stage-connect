@@ -57,7 +57,6 @@ const ThePerformer: React.FC = () => {
         alt="Spotify logo"
         className="h-12"
       />
-      Spotify
     </a>
     <a
       href="https://dzr.page.link/Ld67Wa7m7GivY2dE6"
@@ -71,7 +70,6 @@ const ThePerformer: React.FC = () => {
         alt="Deezer logo"
         className="h-5"
       />
-      Deezer
     </a>
   </div>
 </div>
