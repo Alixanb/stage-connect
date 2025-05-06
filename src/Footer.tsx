@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
         <div className="mt-auto flex justify-between w-full px-20 py-8 border-t border-white/20">
           <div className="flex items-center gap-4">
             <a
-              href="https://facebook.com/connectstage"
+              href="https://www.facebook.com/share/19ExbnA4Uf/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
               <img src={facebook} alt="Facebook" height={12} width={12} />
             </a>
             <a
-              href="https://instagram.com/connectstage"
+              href="https://www.instagram.com/connect.stage/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
