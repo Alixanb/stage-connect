@@ -50,33 +50,29 @@ const ThePerformer: React.FC = () => {
                 href="https://open.spotify.com/artist/4JS2lTQZgzfanDQj7Yfrkq?si=v7uhOc9rRnGLYjQsiRqBSw"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded flex items-center gap-2"
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2"
               >
                 <img
                   src="https://www.logo.wine/a/logo/Spotify/Spotify-Black-Logo.wine.svg"
                   alt="Spotify logo"
                   className="h-12"
                 />
-                Spotify
               </a>
               <a
                 href="https://dzr.page.link/Ld67Wa7m7GivY2dE6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white px-4 py-2 rounded flex items-center gap-2"
-                style={{ backgroundColor: '#9D36F2' }}
+                className="text-white px-4 py-2 rounded-full flex items-center gap-2"
+                style={{ backgroundColor: '#FFF' }}
               >
                 <img
                   src="https://upload.wikimedia.org/wikipedia/fr/c/ca/Logo_Deezer_2023.svg"
                   alt="Deezer logo"
                   className="h-5"
                 />
-                Deezer
               </a>
             </div>
           </div>
-
-
         </div>
 
         {/* Texte explicatif */}
