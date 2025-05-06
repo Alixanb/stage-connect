@@ -1,4 +1,1 @@
 - Mettre un bouton retour accueil depuis la page expérience
-- Responsive page contact
-- header responsive
-- mettre le lien artiste dans les images carrousel
