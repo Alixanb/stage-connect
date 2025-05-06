@@ -39,9 +39,9 @@ const Contact: React.FC = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-black p-16 grid grid-cols-2 gap-10">
+      <div className="min-h-screen bg-black p-16 grid grid-cols-1  gap-10">
         <div className="flex flex-col justify-center items-start">
-          <div className="flex items-center text-[80px] uppercase font-medium text-left p-5 border-b border-gray-500 pb-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center text-3xl lg:text-[80px] uppercase font-medium text-left p-5 border-b border-gray-500 pb-2">
             <img
               src={Mail}
               alt="mail"
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
             <span>Contactez-nous</span>
           </div>
         </div>
-        <div className="flex flex-col justify-between justify-center">
+        <div className="flex flex-col justify-center">
           <section>
             <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
               <form onSubmit={handleSubmit} className="space-y-8">

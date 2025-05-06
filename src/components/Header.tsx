@@ -28,7 +28,7 @@ export const Header = () => {
         draggable={false}
       />
 
-      <div className="relative flex flex-col text-6xl xl:text-9xl 2xl:text-[140px] uppercase font-medium">
+      <div className="relative flex flex-col text-5xl xl:text-9xl 2xl:text-[140px] uppercase font-medium">
         {/* Image waveBottom derrière le titre */}
         <img
           src="/pictures/medium_wave_1.png"
