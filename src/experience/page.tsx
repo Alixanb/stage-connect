@@ -17,8 +17,9 @@ const isInConstruction = true;
 const ExperiencePage: React.FC = () => {
   if (isInConstruction) {
     return (
-      <div className="w-full h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold">This page is under construction</h1>
+      <div className="w-full h-screen flex flex-col items-center justify-center px-4 text-center">
+        <h1 className="text-5xl md:text-6xl font-bold font-nickel mb-6 uppercase">L'experience arrive !</h1>
+        <h2 className="text-2xl md:text-3xl font-apotek-regular text-gray-300">Rendez-vous le 14 mai pour participer au projet</h2>
       </div>
     )
   }
