@@ -34,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [])
 
   return (
-    <div className="site-wrapper flex flex-col min-h-screen">
+    <div className="site-wrapper flex flex-col min-h-screen overflow-x-hidden">
       <header className="sticky top-0 z-20 bg-black/80 backdrop-blur flex justify-between">
         <div className="relative z-10 flex flex-row p-4 justify-start text-xl text-white ml-8">
           <a href="/" target="_blank" rel="noopener noreferrer">
