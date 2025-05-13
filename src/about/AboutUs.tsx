@@ -13,19 +13,11 @@ export default function AboutUs() {
       <div className="bg-black text-white">
         {/* Header */}
         <section className="py-8 px-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 text-center md:text-left">
-<<<<<<< HEAD
-          <h1 className="text-6xl md:text-7xl font-black tracking-wide font-nickel">À PROPOS</h1>
-          <img
-            src="/pictures/medium_wave_1.png"
-            alt=""
-            className="absolute left-100 w-full pointer-events-none select-none z-0"
-=======
           <h1 className="text-6xl md:text-7xl font-black tracking-wide font-nickel z-1">À PROPOS</h1>
           <img
             src="/pictures/medium_wave_1.png"
             alt=""
             className="absolute left-0 top-20 max-w-full w-auto md:w-full pointer-events-none select-none z-0"
->>>>>>> refs/remotes/origin/main
             style={{ maxHeight: 180, transform: "scaleX(-1)" }}
             draggable={false}
           />
@@ -39,20 +31,20 @@ export default function AboutUs() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight font-nickel">
                 Immersion totale <br /> dans l'expérience concert
               </h2>
-                <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
+              <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
                 Connect Stage vous offre la possibilité d'assister à un concert sans quitter votre domicile, tout en ayant l'impression d'y être réellement. Notre plateforme vous permet d'explorer librement une salle de concert virtuelle, où vous pouvez vous promener, interagir et vivre le concert comme si vous étiez au cœur de l'événement.
-                </p>
-                <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
+              </p>
+              <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
                 Que vous soyez dans l'impossibilité de vous rendre à un concert à cause de problèmes de mobilité, de santé ou de phobie de la foule, ou que vous soyez simplement éloigné géographiquement, Connect Stage vous permet de vivre pleinement l'expérience concert depuis n'importe où.
-                </p>
-                <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
+              </p>
+              <p className="text-white/70 text-base md:text-xl mb-6 max-w-xl font-apotek-regular">
                 Les artistes peuvent ainsi se produire en ligne dans un environnement virtuel réaliste, atteignant un public mondial, tout en augmentant la visibilité de leur merchandising grâce à des liens directs vers leurs boutiques en ligne.
-                </p>
-                <div className="max-w-7xl mx-auto mt-6 text-secondary text-sm md:text-base">
+              </p>
+              <div className="max-w-7xl mx-auto mt-6 text-secondary text-sm md:text-base">
                 <a href="/experience" className="underline mt-2 inline-block text-secondary font-apotek-medium text-lg" aria-label="Découvrir l'expérience Connect Stage">
                   Découvrir l'expérience
                 </a>
-                </div>
+              </div>
             </div>
 
             {/* Colonne droite */}
@@ -97,26 +89,26 @@ export default function AboutUs() {
             <p className="text-8xl tracking-tight font-nickel uppercase">
 =======
           <h2 id="partners-section" className="lg:text-8xl text-4xl tracking-tight font-nickel">ARTISTES PARTENAIRES</h2>
-          <div className="flex lg:justify-between">
-            <p className="mt-2 text-lg text-gray-400 font-apotek-medium">
-              Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
-            </p>
-            <p className="lg:text-8xl text-4xl tracking-tight font-nickel uppercase">
+        <div className="flex lg:justify-between">
+          <p className="mt-2 text-lg text-gray-400 font-apotek-medium">
+            Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
+          </p>
+          <p className="lg:text-8xl text-4xl tracking-tight font-nickel uppercase">
 >>>>>>> refs/remotes/origin/main
-              Collaborations
-            </p>
-          </div>
+            Collaborations
+          </p>
+        </div>
 
-          {/* Avatars */}
-          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a href="/artist" ><img src="/pictures/caroussel_1.webp" alt="Artiste partenaire 1" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" /></a>
-            <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-            <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-            <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-    
-          </div>
-        </section>
-      </div>
-    </Layout>
+        {/* Avatars */}
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <a href="/artist" ><img src="/pictures/caroussel_1.webp" alt="Artiste partenaire 1" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" /></a>
+          <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+          <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+          <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+
+        </div>
+      </section>
+    </div>
+    </Layout >
   );
 }
