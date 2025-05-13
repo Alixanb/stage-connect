@@ -39,6 +39,7 @@ const Contact: React.FC = () => {
 
   return (
     <Layout>
+<<<<<<< HEAD
       <div className="min-h-screen bg-black p-16 grid grid-cols-1  gap-10">
         <div className="flex flex-col justify-center items-start">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center text-3xl lg:text-[80px] uppercase font-medium text-left p-5 border-b border-gray-500 pb-2">
@@ -50,6 +51,25 @@ const Contact: React.FC = () => {
               height="120"
             />
             <span>Contactez-nous</span>
+=======
+      <div className="min-h-screen bg-black p-16 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:justify-between">
+        {/* Bloc gauche : Titre + logo */}
+        <div className="flex flex-col justify-center items-start">
+          <div className="flex flex-col lg:flex-col items-start w-full">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8 w-full">
+              <img
+                src={Mail}
+                alt="mail"
+                className="mb-4 lg:mb-0"
+                width="120"
+                height="120"
+              />
+              <span className="lg:text-7xl text-4xl uppercase font-medium text-left">
+                Contactez-nous
+              </span>
+            </div>
+            <div className="border-b border-gray-500 mt-4 lg:mt-8 w-full"></div>
+>>>>>>> refs/remotes/origin/main
           </div>
         </div>
         <div className="flex flex-col justify-center">
@@ -73,7 +93,11 @@ const Contact: React.FC = () => {
                 <div>
                   <label
                     htmlFor="type"
+<<<<<<< HEAD
                     className="block mb-2 text-sm font-medium font-apotek-medium"
+=======
+                    className="block mb-2 text-xl font-medium font-apotek-medium"
+>>>>>>> refs/remotes/origin/main
                   >
                     Type de message
                   </label>
@@ -93,7 +117,11 @@ const Contact: React.FC = () => {
                 <div>
                   <label
                     htmlFor="subject"
+<<<<<<< HEAD
                     className="block mb-2 text-sm font-medium font-apotek-medium"
+=======
+                    className="block mb-2 text-xl font-medium font-apotek-medium"
+>>>>>>> refs/remotes/origin/main
                   >
                     Sujet
                   </label>
@@ -126,7 +154,11 @@ const Contact: React.FC = () => {
                 </div>
                 <button
                   type="submit"
+<<<<<<< HEAD
                   className="font-nickel text-black bg-white text-xl py-4 px-24 rounded-full cursor-pointer hover:bg-gray-100 transition-colors disabled:opacity-70"
+=======
+                  className="font-nickel text-black bg-white text-lg py-4 lg:px-24 px-8 rounded-full cursor-pointer hover:bg-gray-100 transition-colors disabled:opacity-70"
+>>>>>>> refs/remotes/origin/main
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}

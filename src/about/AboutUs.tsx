@@ -13,11 +13,19 @@ export default function AboutUs() {
       <div className="bg-black text-white">
         {/* Header */}
         <section className="py-8 px-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 text-center md:text-left">
+<<<<<<< HEAD
           <h1 className="text-6xl md:text-7xl font-black tracking-wide font-nickel">À PROPOS</h1>
           <img
             src="/pictures/medium_wave_1.png"
             alt=""
             className="absolute left-100 w-full pointer-events-none select-none z-0"
+=======
+          <h1 className="text-6xl md:text-7xl font-black tracking-wide font-nickel z-1">À PROPOS</h1>
+          <img
+            src="/pictures/medium_wave_1.png"
+            alt=""
+            className="absolute left-0 top-20 max-w-full w-auto md:w-full pointer-events-none select-none z-0"
+>>>>>>> refs/remotes/origin/main
             style={{ maxHeight: 180, transform: "scaleX(-1)" }}
             draggable={false}
           />
@@ -80,12 +88,21 @@ export default function AboutUs() {
           draggable={false}
         />
         <section className="px-6 pb-12" aria-labelledby="partners-section">
+<<<<<<< HEAD
           <h2 id="partners-section" className="text-8xl tracking-tight font-nickel">ARTISTES PARTENAIRES</h2>
           <div className="flex justify-between">
             <p className="mt-2 text-lg text-gray-400 font-apotek-medium">
               Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
             </p>
             <p className="text-8xl tracking-tight font-nickel uppercase">
+=======
+          <h2 id="partners-section" className="lg:text-8xl text-4xl tracking-tight font-nickel">ARTISTES PARTENAIRES</h2>
+          <div className="flex lg:justify-between">
+            <p className="mt-2 text-lg text-gray-400 font-apotek-medium">
+              Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
+            </p>
+            <p className="lg:text-8xl text-4xl tracking-tight font-nickel uppercase">
+>>>>>>> refs/remotes/origin/main
               Collaborations
             </p>
           </div>

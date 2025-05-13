@@ -60,7 +60,11 @@
   content: "";
   position: absolute;
   left: 0;
+<<<<<<< HEAD
   bottom: 0.1em;
+=======
+  bottom: 0;
+>>>>>>> refs/remotes/origin/main
   width: 100%;
   height: 2px;
   background: #00705d; /* couleur secondary */

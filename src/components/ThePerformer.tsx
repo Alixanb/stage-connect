@@ -44,7 +44,12 @@ const ThePerformer: React.FC = () => {
             viewport={{ once: true }}
           />
 
+<<<<<<< HEAD
           <div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+=======
+          {/* Boutons overlay (desktop uniquement) */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex">
+>>>>>>> refs/remotes/origin/main
             <div className="flex gap-4">
               <a
                 href="https://open.spotify.com/artist/4JS2lTQZgzfanDQj7Yfrkq?si=v7uhOc9rRnGLYjQsiRqBSw"
@@ -62,8 +67,12 @@ const ThePerformer: React.FC = () => {
                 href="https://dzr.page.link/Ld67Wa7m7GivY2dE6"
                 target="_blank"
                 rel="noopener noreferrer"
+<<<<<<< HEAD
                 className="text-white px-4 py-2 rounded-full flex items-center gap-2"
                 style={{ backgroundColor: '#FFF' }}
+=======
+                className="text-white px-4 py-2 rounded-full flex items-center gap-2 bg-white hover:bg-gray-200"
+>>>>>>> refs/remotes/origin/main
               >
                 <img
                   src="https://upload.wikimedia.org/wikipedia/fr/c/ca/Logo_Deezer_2023.svg"
@@ -71,8 +80,65 @@ const ThePerformer: React.FC = () => {
                   className="h-5"
                 />
               </a>
+<<<<<<< HEAD
             </div>
           </div>
+=======
+              <a
+                href="https://m.soundcloud.com/baptippo?utm_source=direct&utm_content=download_button_header&utm_medium=mobi&utm_campaign=no_campaign"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white hover:bg-gray-200 text-white px-4 py-2 rounded-full flex items-center gap-2"
+              >
+                <img
+                  src="https://www.svgrepo.com/show/303135/soundcloud-logo.svg"
+                  alt="SoundCloud logo"
+                  className="h-12"
+                />
+              </a>
+            </div>
+          </div>
+
+          {/* Boutons visibles sous l'image en mobile */}
+          <div className="flex gap-4 justify-center mt-4 md:hidden">
+            <a
+              href="https://open.spotify.com/artist/4JS2lTQZgzfanDQj7Yfrkq?si=v7uhOc9rRnGLYjQsiRqBSw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2"
+            >
+              <img
+                src="https://www.logo.wine/a/logo/Spotify/Spotify-Black-Logo.wine.svg"
+                alt="Spotify logo"
+                className="h-12"
+              />
+            </a>
+            <a
+              href="https://dzr.page.link/Ld67Wa7m7GivY2dE6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white px-4 py-2 rounded-full flex items-center gap-2 bg-white hover:bg-gray-200"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/fr/c/ca/Logo_Deezer_2023.svg"
+                alt="Deezer logo"
+                className="h-5"
+              />
+            </a>
+            <a
+              href="https://m.soundcloud.com/baptippo?utm_source=direct&utm_content=download_button_header&utm_medium=mobi&utm_campaign=no_campaign"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white hover:bg-gray-200 text-white px-4 py-2 rounded-full flex items-center gap-2"
+            >
+              <img
+                src="https://www.svgrepo.com/show/303135/soundcloud-logo.svg"
+                alt="SoundCloud logo"
+                className="h-12"
+              />
+            </a>
+          </div>
+>>>>>>> refs/remotes/origin/main
         </div>
 
         {/* Texte explicatif */}
