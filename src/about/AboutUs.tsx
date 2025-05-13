@@ -80,35 +80,26 @@ export default function AboutUs() {
           draggable={false}
         />
         <section className="px-6 pb-12" aria-labelledby="partners-section">
-<<<<<<< HEAD
-          <h2 id="partners-section" className="text-8xl tracking-tight font-nickel">ARTISTES PARTENAIRES</h2>
-          <div className="flex justify-between">
+          <h2 id="partners-section" className="lg:text-8xl text-4xl tracking-tight font-nickel">ARTISTES PARTENAIRES</h2>
+          <div className="flex lg:justify-between">
             <p className="mt-2 text-lg text-gray-400 font-apotek-medium">
               Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
             </p>
-            <p className="text-8xl tracking-tight font-nickel uppercase">
-=======
-          <h2 id="partners-section" className="lg:text-8xl text-4xl tracking-tight font-nickel">ARTISTES PARTENAIRES</h2>
-        <div className="flex lg:justify-between">
-          <p className="mt-2 text-lg text-gray-400 font-apotek-medium">
-            Découvrez les artistes avec qui nous avons développé leur propre scène virtuelle
-          </p>
-          <p className="lg:text-8xl text-4xl tracking-tight font-nickel uppercase">
->>>>>>> refs/remotes/origin/main
-            Collaborations
-          </p>
-        </div>
+            <p className="lg:text-8xl text-4xl tracking-tight font-nickel uppercase">
+              Collaborations
+            </p>
+          </div>
 
-        {/* Avatars */}
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <a href="/artist" ><img src="/pictures/caroussel_1.webp" alt="Artiste partenaire 1" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" /></a>
-          <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-          <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
-          <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+          {/* Avatars */}
+          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="/artist" ><img src="/pictures/caroussel_1.webp" alt="Artiste partenaire 1" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" /></a>
+            <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 2" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 3" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
+            <img src="/pictures/caroussel_2.webp" alt="Artiste partenaire 4" className="w-full h-auto rounded-lg shadow-md" loading="lazy" width="300" height="300" />
 
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+      </div>
     </Layout >
   );
 }
