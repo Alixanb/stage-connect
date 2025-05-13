@@ -2,8 +2,9 @@
 
 /* Nickel Gothic Variable Regular */
 @font-face {
-  font-family: 'NickelGothic';
-  src: url('/assets/fonts/Nickel_Gothic_Variable_Regular.otf') format('opentype');
+  font-family: "NickelGothic";
+  src: url("/assets/fonts/Nickel_Gothic_Variable_Regular.otf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11,8 +12,8 @@
 
 /* Apotek Comp Medium */
 @font-face {
-  font-family: 'ApotekCompMedium';
-  src: url('/assets/fonts/Apotek_Comp_Medium.otf') format('opentype');
+  font-family: "ApotekCompMedium";
+  src: url("/assets/fonts/Apotek_Comp_Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -20,8 +21,8 @@
 
 /* Apotek Comp Regular */
 @font-face {
-  font-family: 'ApotekCompRegular';
-  src: url('/assets/fonts/Apotek_Comp_Regular.otf') format('opentype');
+  font-family: "ApotekCompRegular";
+  src: url("/assets/fonts/Apotek_Comp_Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -29,21 +30,21 @@
 
 /* Utilitaires Tailwind personnalisés */
 .font-nickel {
-  font-family: 'NickelGothic', sans-serif !important;
+  font-family: "NickelGothic", sans-serif !important;
 }
 .font-apotek-medium {
-  font-family: 'ApotekCompMedium', sans-serif !important;
+  font-family: "ApotekCompMedium", sans-serif !important;
 }
 .font-apotek-regular {
-  font-family: 'ApotekCompRegular', sans-serif !important;
+  font-family: "ApotekCompRegular", sans-serif !important;
 }
 
-.text-primary{
-  color : #86182f !important;
+.text-primary {
+  color: #86182f !important;
 }
 
-.text-secondary{
-  color : #00705d !important;
+.text-secondary {
+  color: #00705d !important;
 }
 
 .hover\:text-primary:hover {
@@ -60,17 +61,13 @@
   content: "";
   position: absolute;
   left: 0;
-<<<<<<< HEAD
-  bottom: 0.1em;
-=======
-  bottom: 0;
->>>>>>> refs/remotes/origin/main
+  bottom: 0em;
   width: 100%;
   height: 2px;
   background: #00705d; /* couleur secondary */
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-underline-animate:hover::after,

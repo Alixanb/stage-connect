@@ -1,14 +1,9 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { textAnimations } from '../animations/textAnimations'
-<<<<<<< HEAD
-import caroussel_1 from '/pictures/caroussel_1.webp'
-import caroussel_2 from '/pictures/caroussel_2.webp'
-=======
 import caroussel_1 from '/pictures/caroussel_experiance_1.png'
 import caroussel_2 from '/pictures/caroussel_experiance_2.png'
 import caroussel_3 from '/pictures/caroussel_experiance_3.png'
->>>>>>> refs/remotes/origin/main
 
 const Experience = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -29,11 +24,7 @@ const Experience = () => {
           width: '25%',
         },
         {
-<<<<<<< HEAD
-          image: caroussel_2,
-=======
           image: caroussel_3,
->>>>>>> refs/remotes/origin/main
           alt: 'Environnement 3D de Connect Stage',
           width: '25%',
         },
@@ -55,11 +46,7 @@ const Experience = () => {
           width: '50%',
         },
         {
-<<<<<<< HEAD
-          image: caroussel_2,
-=======
           image: caroussel_3,
->>>>>>> refs/remotes/origin/main
           alt: 'Environnement 3D de Connect Stage',
           width: '25%',
         },
@@ -81,11 +68,7 @@ const Experience = () => {
           width: '25%',
         },
         {
-<<<<<<< HEAD
-          image: caroussel_2,
-=======
           image: caroussel_3,
->>>>>>> refs/remotes/origin/main
           alt: 'Environnement 3D de Connect Stage',
           width: '50%',
         },
@@ -132,8 +115,6 @@ const Experience = () => {
       className="bg-black text-white py-20 min-h-[800px] lg:min-h-[1000px]"
       aria-labelledby="experience-section"
     >
-<<<<<<< HEAD
-=======
       {/* Image big_wave en fond, toute largeur, derrière le texte */}
       <img
         src="/pictures/big_wave.png"
@@ -142,7 +123,6 @@ const Experience = () => {
         draggable={false}
       />
 
->>>>>>> refs/remotes/origin/main
       <div className="container mx-auto px-4 mb-20">
         <motion.h2
           id="experience-section"
@@ -166,16 +146,10 @@ const Experience = () => {
         </motion.p>
       </div>
 
-<<<<<<< HEAD
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-start max-w-[1400px] mx-auto">
-          <div className="w-full ">
-=======
       <div className="container mx-auto px-4 z-1">
         <div className="flex flex-col items-start max-w-[1400px] mx-auto relative">
           {/* Carrousel */}
           <div className="w-full relative z-10">
->>>>>>> refs/remotes/origin/main
             <div className="mb-4 border-1 border-white p-6">
               <div className="flex gap-4">
                 {slides[currentSlide].images.map((slide, index) => (

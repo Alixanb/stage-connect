@@ -1,13 +1,10 @@
 import background from '/pictures/bg_footer.png'
+import deezer from '/pictures/deezer.svg'
 import facebook from '/pictures/facebook.svg'
 import insta from '/pictures/insta.svg'
-<<<<<<< HEAD
-=======
-import spotify from '/pictures/spotify.svg'
-import soundcloud from '/pictures/soundcloud.svg'
-import deezer from '/pictures/deezer.svg'
->>>>>>> refs/remotes/origin/main
 import logo from '/pictures/logo_footer.svg'
+import soundcloud from '/pictures/soundcloud.svg'
+import spotify from '/pictures/spotify.svg'
 
 const Footer: React.FC = () => {
   return (
@@ -78,8 +75,6 @@ const Footer: React.FC = () => {
             >
               <img src={insta} alt="Instagram" width={20} height={20} />
             </a>
-<<<<<<< HEAD
-=======
 
             <a
               href="https://open.spotify.com/artist/4JS2lTQZgzfanDQj7Yfrkq?si=v7uhOc9rRnGLYjQsiRqBSw"
@@ -107,16 +102,13 @@ const Footer: React.FC = () => {
             >
               <img src={deezer} alt="Instagram" width={20} height={20} />
             </a>
-             
-             
->>>>>>> refs/remotes/origin/main
-          </div>
+          </div >
           <p className="text-white/50 text-lg font-apotek-regular">
             © 2025 Connect Stage. Tous droits réservés.
           </p>
-        </div>
-      </div>
-    </footer>
+        </div >
+      </div >
+    </footer >
   )
 }
 
