@@ -1,6 +1,9 @@
 import background from '/pictures/bg_footer.png'
 import facebook from '/pictures/facebook.svg'
 import insta from '/pictures/insta.svg'
+import spotify from '/pictures/spotify.svg'
+import soundcloud from '/pictures/soundcloud.svg'
+import deezer from '/pictures/deezer.svg'
 import logo from '/pictures/logo_footer.svg'
 
 const Footer: React.FC = () => {
@@ -72,6 +75,35 @@ const Footer: React.FC = () => {
             >
               <img src={insta} alt="Instagram" width={20} height={20} />
             </a>
+
+            <a
+              href="https://open.spotify.com/artist/4JS2lTQZgzfanDQj7Yfrkq?si=v7uhOc9rRnGLYjQsiRqBSw"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Spotify"
+            >
+              <img src={spotify} alt="Instagram" width={20} height={20} />
+            </a>
+
+            <a
+              href="https://dzr.page.link/Ld67Wa7m7GivY2dE6"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Deezer"
+            >
+              <img src={soundcloud} alt="Instagram" width={20} height={20} />
+            </a>
+
+            <a
+              href="https://m.soundcloud.com/baptippo?utm_source=direct&utm_content=download_button_header&utm_medium=mobi&utm_campaign=no_campaign"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="SoundCloud"
+            >
+              <img src={deezer} alt="Instagram" width={20} height={20} />
+            </a>
+             
+             
           </div>
           <p className="text-white/50 text-lg font-apotek-regular">
             © 2025 Connect Stage. Tous droits réservés.

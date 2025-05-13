@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { textAnimations } from '../animations/textAnimations'
-import caroussel_1 from '/pictures/caroussel_1.webp'
-import caroussel_2 from '/pictures/caroussel_2.webp'
+import caroussel_1 from '/pictures/caroussel_experiance_1.png'
+import caroussel_2 from '/pictures/caroussel_experiance_2.png'
+import caroussel_3 from '/pictures/caroussel_experiance_3.png'
 
 const Experience = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -23,7 +24,7 @@ const Experience = () => {
           width: '25%',
         },
         {
-          image: caroussel_2,
+          image: caroussel_3,
           alt: 'Environnement 3D de Connect Stage',
           width: '25%',
         },
@@ -45,7 +46,7 @@ const Experience = () => {
           width: '50%',
         },
         {
-          image: caroussel_2,
+          image: caroussel_3,
           alt: 'Environnement 3D de Connect Stage',
           width: '25%',
         },
@@ -67,7 +68,7 @@ const Experience = () => {
           width: '25%',
         },
         {
-          image: caroussel_2,
+          image: caroussel_3,
           alt: 'Environnement 3D de Connect Stage',
           width: '50%',
         },
@@ -114,6 +115,14 @@ const Experience = () => {
       className="bg-black text-white py-20 min-h-[800px] lg:min-h-[1000px]"
       aria-labelledby="experience-section"
     >
+      {/* Image big_wave en fond, toute largeur, derrière le texte */}
+      <img
+        src="/pictures/big_wave.png"
+        className="pointer-events-none select-none absolute left-0 bottom-0 w-full z-0 hidden md:block"
+        style={{ maxHeight: 800, objectFit: 'cover', top: 2400 }}
+        draggable={false}
+      />
+
       <div className="container mx-auto px-4 mb-20">
         <motion.h2
           id="experience-section"
@@ -137,9 +146,10 @@ const Experience = () => {
         </motion.p>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-start max-w-[1400px] mx-auto">
-          <div className="w-full ">
+      <div className="container mx-auto px-4 z-1">
+        <div className="flex flex-col items-start max-w-[1400px] mx-auto relative">
+          {/* Carrousel */}
+          <div className="w-full relative z-10">
             <div className="mb-4 border-1 border-white p-6">
               <div className="flex gap-4">
                 {slides[currentSlide].images.map((slide, index) => (

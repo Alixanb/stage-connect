@@ -34,9 +34,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [])
 
   return (
-    <div className="site-wrapper flex flex-col min-h-screen overflow-x-hidden">
+    <div className="site-wrapper flex flex-col min-h-screen">
       <header className="sticky top-0 z-20 bg-black/80 backdrop-blur flex justify-between">
-        <div className="relative z-10 flex flex-row p-4 justify-start text-xl text-white ml-8">
+        <div className="relative z-10 flex flex-row p-4 justify-start text-xl text-white ml-8 font-apotek-medium">
           <a href="/" target="_blank" rel="noopener noreferrer">
             <motion.img
               src="/pictures/logo.png"
@@ -45,7 +45,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="w-16 h-auto"
+              className="w-12 h-auto"
             />
           </a>
         </div>
