@@ -29,7 +29,8 @@
     "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.28.0",
     "tailwindcss": "^4.0.9",
-    "three": "^0.170.0"
+    "three": "^0.170.0",
+    "three-stdlib": "^2.36.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
