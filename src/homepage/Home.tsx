@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { AboutUs } from '../components/AboutUs'
-import Experience from '../components/Experience'
+import Experience from '../components/ExperienceHomePage'
 import { Header } from '../components/Header'
 import Layout from '../components/Layout'
 import ThePerformer from '../components/ThePerformer'

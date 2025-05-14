@@ -1,9 +1,9 @@
 import { KeyboardControls, KeyboardControlsEntry } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
-import Experience from '../components/Experience'import { VolumeControl } from "../components/VolumeControl";
+import Experience from '../components/Experience'
+import { VolumeControl } from "../components/VolumeControl";
 import { VolumeProvider } from "../contexts/VolumeContext";
-
 
 const keyboardMap: KeyboardControlsEntry<string>[] = [
   { name: 'forward', keys: ['KeyW', 'ArrowUp'] },
@@ -14,7 +14,7 @@ const keyboardMap: KeyboardControlsEntry<string>[] = [
   { name: 'jump', keys: ['Space'] },
 ]
 
-const isInConstruction = true;
+const isInConstruction = false;
 
 const ExperiencePage: React.FC = () => {
   if (isInConstruction) {
@@ -27,21 +27,24 @@ const ExperiencePage: React.FC = () => {
   }
 
   return (
-    <div className="w-full h-screen">
-      <KeyboardControls map={keyboardMap}>
-        <Canvas
-          shadows
-          camera={{ position: [3, 3, 3], near: 0.1, fov: 40 }}
-          style={{
-            touchAction: "none",
-            height: "100%",
-            width: "100%"
-          }}
-        >
-          <Experience />
-        </Canvas>
-      </KeyboardControls>
-    </div>
+    <VolumeProvider>
+      <div className="w-full h-screen">
+        <KeyboardControls map={keyboardMap}>
+          <Canvas
+            shadows
+            camera={{ position: [3, 3, 3], near: 0.1, fov: 40 }}
+            style={{
+              touchAction: "none",
+              height: "100%",
+              width: "100%"
+            }}
+          >
+            <Experience />
+          </Canvas>
+        </KeyboardControls>
+      </div>
+      <VolumeControl />
+    </VolumeProvider>
   );
 };
 
