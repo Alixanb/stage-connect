@@ -12,7 +12,7 @@ import { InteractiveElements } from "./InteractiveElements";
 import { Map } from "./Map";
 import { NeonLights } from "./NeonLights";
 
-type MapName = 'salle_numatrouffe';
+type MapName = 'YDAYS_NOUMA_ASSEMBLE';
 
 type MapConfig = {
   scale: number;
@@ -42,8 +42,8 @@ const calculateTimePosition = (): number => {
 export const Experience = () => {
   const { map } = useControls("Map", {
     map: {
-      value: "salle_numatrouffe" as MapName,
-      options: ["salle_numatrouffe"] as MapName[],
+      value: "YDAYS_NOUMA_ASSEMBLE" as MapName,
+      options: ["YDAYS_NOUMA_ASSEMBLE"] as MapName[],
     },
   });
 
