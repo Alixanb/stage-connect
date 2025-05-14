@@ -50,4 +50,4 @@ Projet réalisé par des étudiants de **Ynov Campus**.
 
 ---
 
-© 2025 Stage Connect – Projet étudiant Ynov Campus
+© 2025 Stage Connect – Projet étudiant Ynov Campus -
