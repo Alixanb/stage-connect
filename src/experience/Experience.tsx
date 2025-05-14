@@ -1,23 +1,29 @@
-import React, { useRef } from "react";
+import { Environment, FirstPersonControls, PerspectiveCamera, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Environment, FirstPersonControls, useGLTF } from "@react-three/drei";
-import { PerspectiveCamera } from "three";
+import React, { useRef } from "react";
+import { PerspectiveCamera as ThreePerspectiveCamera } from "three";
 
 const Model: React.FC = () => {
-  // Charger le modèle avec useGLTF
-  const { scene } = useGLTF("/platine.gltf");
+  const { scene } = useGLTF("/platine.gltf", true);
+
+  // Enable frustum culling
+  scene.traverse((child) => {
+    if ((child as any).isMesh) {
+      child.frustumCulled = true;
+    }
+  });
 
   return <primitive object={scene} scale={1} />;
 };
 
 const Experience: React.FC = () => {
-  const cameraRef = useRef<PerspectiveCamera>(null);
+  const cameraRef = useRef<ThreePerspectiveCamera>(null);
 
   return (
     <div className="fullscreen-container">
       <Canvas>
-        {/* Définir la caméra avec makeDefault pour la rendre par défaut */}
-        <perspectiveCamera makeDefault position={[0, 1, 5]} fov={75} ref={cameraRef} />
+        {/* Définir la caméra avec la position très basse */}
+        <PerspectiveCamera makeDefault position={[0, 0.15, 5]} fov={75} ref={cameraRef} />
 
         {/* Lumières */}
         <ambientLight intensity={0.5} />
